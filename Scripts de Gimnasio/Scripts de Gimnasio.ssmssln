@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Scripts de Gimnasio", "Scripts de Gimnasio\Scripts de Gimnasio.ssmssqlproj", "{88C18043-A6E4-4A1B-879F-D9C372F36E1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88C18043-A6E4-4A1B-879F-D9C372F36E1C}.Default|Default.ActiveCfg = Default
+		{38428ACB-B6FA-4218-AF16-85EE08E3830C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6247D18-4BF1-4FB7-B328-F89371ACB70E}
+	EndGlobalSection
+EndGlobal
