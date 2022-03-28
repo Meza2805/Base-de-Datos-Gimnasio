@@ -33,7 +33,7 @@ CREATE TABLE Registo_Asistencia
 )
 
 
-CREATE TABLE Empleado 
+alter TABLE Empleado 
 (
   ID_Empleado int identity (1,1) not null,
   [Primer Nombre] nvarchar(25) COLLATE Modern_Spanish_CI_AS  not null,
@@ -141,3 +141,38 @@ CREATE TABLE [Producto_Proveedor] (
   Constraint FK_Prodcuto2 foreign key (ID_Producto) references Producto (ID_Producto) on delete cascade on update cascade,
   Constraint FK_Proveedor foreign key  (ID_Proveedor) references Proveedor (ID_Proveedor) on delete cascade on update cascade
 )
+
+
+create table Estado_Empleado
+(
+ID_Empleado char(1) not null,
+Descripcoion nvarchar(25)
+Constraint PK_Estado_Empleado primary key (ID_Empleado)
+)
+
+
+
+select * from Empleado
+--Agregando el campo de id_estado_cliente a la tabla Cliente que ya estaba creada
+alter table Empleado
+	add  ID_Estado_Empleado char (1)
+	constraint FK_ID_ESTADO_EMPLEADO_2 FOREIGN KEY  (ID_Estado_Empleado) REFERENCES Estado_Empleado (ID_Empleado) on delete cascade on update cascade
+
+--SE UTILIZA UN PROCEDIMIENTO ALMACENADO PREDETERMINADO EN SQL PARA REALIZAR EL CAMBIO DE NOMBRE DE UNA COLUMNA
+exec sp_rename 'dbo.Estado_Empleado.ID_Empleado', 'ID_ESTADO_EMP','COLUMN'
+SELECT * FROM Estado_Empleado
+
+
+sp_rename 'dbo.Estado_Cliente.ID_Observacion','Observacion'
+
+
+
+select * from Estado_Cliente
+
+create table Observacion 
+(
+	ID_Observacion int identity (1,1) not null,
+	Descripcion_Observacion varchar(100)
+	Constraint PK_Observacion primary key (ID_Observacion)
+)
+
