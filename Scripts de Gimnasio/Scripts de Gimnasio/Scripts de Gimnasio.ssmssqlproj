@@ -55,6 +55,12 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Empleado.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Insertar_Sucripcion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Sucripcion.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Varios" Type="3" Sorted="true">
