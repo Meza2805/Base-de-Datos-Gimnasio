@@ -43,6 +43,12 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Insertar_Membresia.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Insertar_Categoria.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Categoria.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Insertar_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -55,11 +61,23 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Empleado.sql</FullPath>
         </FileNode>
-        <FileNode Name="SP_Insertar_Sucripcion.sql">
+        <FileNode Name="SP_Insertar_Producto.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
-          <FullPath>SP_Insertar_Sucripcion.sql</FullPath>
+          <FullPath>SP_Insertar_Producto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Insertar_Proveedor.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Proveedor.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Insertar_Suscripcion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Suscripcion.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

@@ -113,6 +113,13 @@ CREATE TABLE Producto
   Constraint FK_ID_Categoria foreign key (ID_Categoria)  references Categoria (ID_Categoria) on delete cascade on update cascade
 )
 
+alter table Producto
+add Fecha_Compra date
+
+alter table Producto
+add Descripcion_Producto nvarchar (200)
+
+
 CREATE TABLE Detalle_Factura
 (
   [ID_Detalle] int identity (1,1) not null,
