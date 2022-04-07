@@ -7,8 +7,10 @@ ALTER proc SP_Insertar_Proveedor
 @Direccion nvarchar (300)
 as
 begin
+set nocount on
 	insert into Proveedor (Nombre,Telefono,Direccion)
 		values (LTRIM(RTRIM(UPPER(@Nombre))),LTRIM(RTRIM(UPPER(@Telefono))),LTRIM(RTRIM(UPPER(@Direccion))))
+		print 'PROVEEDOR REGISTRADO'
 end
 
 exec SP_Insertar_Proveedor 'HAMMER NUTRITION','22268210','PLAZA NATURA MODULOS A24 Y A25'

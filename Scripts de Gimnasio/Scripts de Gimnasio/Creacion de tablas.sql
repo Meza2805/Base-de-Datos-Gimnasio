@@ -114,6 +114,9 @@ CREATE TABLE Producto
 )
 
 alter table Producto
+add Marca varchar(50)
+
+alter table Producto
 add Fecha_Compra date
 
 alter table Producto

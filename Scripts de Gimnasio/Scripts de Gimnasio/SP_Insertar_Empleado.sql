@@ -13,6 +13,7 @@ ALTER proc SP_Insertar_Empleado
 	@Estado_Empleado char(1)= 'A'
 	as
 	begin
+	set nocount on
 		insert into Empleado ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],Telefono,Direccion,[Fecha Contratacion],ID_Estado_Empleado)
 			values (ltrim(rtrim(upper(@Pnombre))),ltrim(rtrim(upper(@Snombre))),ltrim(rtrim(upper(@Papellido))),ltrim(rtrim(upper(@Sapellido))),@telefono,@direccion,@fecha_Contratacion,@Estado_Empleado)
 

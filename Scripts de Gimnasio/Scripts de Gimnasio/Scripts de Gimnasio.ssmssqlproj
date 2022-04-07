@@ -67,11 +67,23 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Producto.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Insertar_Producto_Proveedor.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Producto_Proveedor.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Insertar_Proveedor.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Proveedor.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Insertar_R_Asistencia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_R_Asistencia.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Insertar_Suscripcion.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>

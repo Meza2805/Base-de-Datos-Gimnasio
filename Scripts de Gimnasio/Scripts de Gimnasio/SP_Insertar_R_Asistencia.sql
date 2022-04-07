@@ -1,0 +1,66 @@
+select * from Registo_Asistencia
+
+alter proc SP_Insertar_Registro_Asistencia
+@ID_Cliente int
+as
+	begin
+	declare @Fecha_Actual date
+	set @Fecha_Actual = cast (datepart(year,getdate())as varchar(4))+
+						'-' +cast (datepart(month,getdate())as varchar(2)) +
+						'-' +cast (datepart(day,getdate())as varchar(2))
+	set nocount on
+	if not exists (select top 1 ID_Cliente from Registo_Asistencia where ID_Cliente =  @ID_Cliente and Fecha = @Fecha_Actual)
+		begin
+		if @Fecha_Actual > (select Fecha_Expiracion from suscripcion)
+			begin
+				print 'MEMBRESIA EXPIRADA'
+			end
+		else
+		begin
+			insert into Registo_Asistencia (Fecha,Hora,ID_Cliente)
+			values (GETDATE(),cast(datepart (hour, getdate()) as char(2))+ ' : ' +cast (datepart (mi,getdate()) as char(2)),@id_cliente)
+			print 'ASISTENCIA REGISTRADA'
+		end
+	end
+	else
+		begin
+			print 'CLIENTE YA REGISTRADO EL DIA DE HOY'
+		end
+	end
+
+
+	--Insertando asistencia de los clientes el dia  07/04/2022
+	exec SP_Insertar_Registro_Asistencia 2
+
+--Buscando la manera de comparar la fecha usando el cast y el datepart
+select * from Registo_Asistencia
+print cast (datepart(year,getdate())as varchar(4))+
+'-' +cast (datepart(month,getdate())as varchar(2)) +
+'-' +cast (datepart(day,getdate())as varchar(2))
+
+--realizando prueba a con condicional
+declare @fecha01 date
+declare @fecha02 date
+
+set @fecha01 = cast (datepart(year,getdate())as varchar(4))+
+'-' +cast (datepart(month,getdate())as varchar(2)) +
+'-' +cast (datepart(day,getdate())as varchar(2))
+set @fecha02 =  '2022-04-07'
+if @fecha01 = @fecha02 
+	begin
+	print 'SON IGUALES'
+	end
+
+
+select * from Registo_Asistencia
+
+
+--realizando comparacion de fechas
+declare @fecha03 date
+declare @fecha04 date
+set @fecha03='2022-04-07'
+set @fecha04='2022-04-08' 
+if @fecha04 > @fecha03
+	begin
+	print 'LA FECHA ES MAYOR'
+	end
