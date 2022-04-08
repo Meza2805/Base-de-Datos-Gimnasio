@@ -10,7 +10,7 @@ CREATE TABLE Estado_Cliente
 
 alter TABLE Cliente
  (
- -- ID_Cliente int identity (1,1)  not null,
+  ID_Cliente int identity (1,1)  not null,
   [Primer Nombre] nvarchar(25) COLLATE Modern_Spanish_CI_AS  not null,
   [Segundo Nombre] nvarchar(25) COLLATE Modern_Spanish_CI_AS ,
   [Primer Apellido] nvarchar(25)COLLATE Modern_Spanish_CI_AS  not null,

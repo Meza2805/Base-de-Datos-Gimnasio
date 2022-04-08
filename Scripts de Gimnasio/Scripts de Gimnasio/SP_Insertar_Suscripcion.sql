@@ -63,3 +63,9 @@ select * from Cliente
 --segunda sesion de inssercion de suscripcion de membresia
 exec SP_Insertar_Suscripcion 26,1,'Q'
 exec SP_Insertar_Suscripcion 23,1,'S'
+
+exec SP_Insertar_Suscripcion 1,2,'S'
+exec SP_Insertar_Suscripcion 4,2,'Q'
+exec SP_Insertar_Suscripcion 7,2,'S'
+exec SP_Insertar_Suscripcion 10,2,'Q'
+exec SP_Insertar_Suscripcion 17,2,'Q'

@@ -11,14 +11,14 @@ as
 	set nocount on
 	if not exists (select top 1 ID_Cliente from Registo_Asistencia where ID_Cliente =  @ID_Cliente and Fecha = @Fecha_Actual)
 		begin
-		if @Fecha_Actual > (select Fecha_Expiracion from suscripcion)
+		if @Fecha_Actual > (select Fecha_Expiracion from suscripcion where ID_Cliente = @ID_Cliente)
 			begin
 				print 'MEMBRESIA EXPIRADA'
 			end
 		else
 		begin
 			insert into Registo_Asistencia (Fecha,Hora,ID_Cliente)
-			values (GETDATE(),cast(datepart (hour, getdate()) as char(2))+ ' : ' +cast (datepart (mi,getdate()) as char(2)),@id_cliente)
+			values (GETDATE(),(cast(datepart (hour, getdate()) as char(2))+ ' : ' +cast (datepart (mi,getdate()) as char(2))),@id_cliente)
 			print 'ASISTENCIA REGISTRADA'
 		end
 	end
@@ -27,10 +27,10 @@ as
 			print 'CLIENTE YA REGISTRADO EL DIA DE HOY'
 		end
 	end
-
+---Fin de proceso almacenado
 
 	--Insertando asistencia de los clientes el dia  07/04/2022
-	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 23
 
 --Buscando la manera de comparar la fecha usando el cast y el datepart
 select * from Registo_Asistencia
@@ -64,3 +64,21 @@ if @fecha04 > @fecha03
 	begin
 	print 'LA FECHA ES MAYOR'
 	end
+
+
+select * from Cliente where ID_Estado = 'A'
+
+--Insertando asistencia de los clientes el dia  08/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 20
