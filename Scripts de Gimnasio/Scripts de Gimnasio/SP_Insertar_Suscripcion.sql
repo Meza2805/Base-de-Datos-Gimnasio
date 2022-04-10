@@ -69,3 +69,11 @@ exec SP_Insertar_Suscripcion 4,2,'Q'
 exec SP_Insertar_Suscripcion 7,2,'S'
 exec SP_Insertar_Suscripcion 10,2,'Q'
 exec SP_Insertar_Suscripcion 17,2,'Q'
+
+
+select * from Cliente
+-- sesion de inssercion de suscripcion de membresia 09/04/2022
+exec SP_Insertar_Suscripcion 27,1,'S'
+exec SP_Insertar_Suscripcion 28,1,'S'
+exec SP_Insertar_Suscripcion 29,2,'S'
+exec SP_Insertar_Suscripcion 30,1,'S'

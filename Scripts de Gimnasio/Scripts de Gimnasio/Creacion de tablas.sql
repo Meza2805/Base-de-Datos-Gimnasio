@@ -186,3 +186,26 @@ create table Observacion
 	Constraint PK_Observacion primary key (ID_Observacion)
 )
 
+select * from Producto
+delete from Producto
+sp_help Producto
+
+--Agregando restriccion para el campo fecha_nacimiento
+alter table Producto WITH NOCHECK ADD
+constraint Fecha_vencimiento default('NO TIENE') FOR [Fecha Vencimiento]
+
+--prueba de varchar y date
+
+declare @fecha_prueba varchar(10)
+declare @fecha_prueba_02 date
+set @fecha_prueba_02 = GETDATE();
+ set @fecha_prueba = CAST (datepart(YEAR, GETDATE()) as varchar(4))+'-'+ CAST ( DATEPART(MONTH,GETDATE()) as varchar(2))+'-'
+ + cast (DATEPART(DAY,GETDATE()) as varchar (4))
+ if @fecha_prueba = @fecha_prueba_02
+	begin
+	print 'SON IGUALES'
+	end
+ print @fecha_prueba
+ print @fecha_prueba_02
+ select * from suscripcion
+ select * from Producto

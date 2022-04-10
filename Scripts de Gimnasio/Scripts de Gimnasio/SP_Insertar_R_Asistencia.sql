@@ -82,3 +82,23 @@ select * from Cliente where ID_Estado = 'A'
 	exec SP_Insertar_Registro_Asistencia 17
 	exec SP_Insertar_Registro_Asistencia 11
 	exec SP_Insertar_Registro_Asistencia 20
+
+select * from Registo_Asistencia
+
+	--Insertando asistencia de los clientes el dia  09/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 7
+
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
+
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 20
