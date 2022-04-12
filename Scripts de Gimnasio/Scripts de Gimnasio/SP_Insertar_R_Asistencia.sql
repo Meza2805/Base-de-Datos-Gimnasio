@@ -13,7 +13,10 @@ as
 		begin
 		if @Fecha_Actual > (select Fecha_Expiracion from suscripcion where ID_Cliente = @ID_Cliente)
 			begin
+				update Cliente set ID_Estado ='I' where ID_Cliente =  @ID_Cliente  
 				print 'MEMBRESIA EXPIRADA'
+				print 'EL CLIENTE HA PASADO A ESTADO INACTIVO'
+				print 'HASTA QUE CONTRATE UNA NUEVA MEMBRESIA'
 			end
 		else
 		begin
@@ -100,5 +103,34 @@ select * from Registo_Asistencia
 	exec SP_Insertar_Registro_Asistencia 12
 	exec SP_Insertar_Registro_Asistencia 17
 
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 20
+
+
+--Insertando asistencia de los clientes el dia  11/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 20
+
+	--Insertando asistencia de los clientes el dia  12/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
 	exec SP_Insertar_Registro_Asistencia 11
 	exec SP_Insertar_Registro_Asistencia 20

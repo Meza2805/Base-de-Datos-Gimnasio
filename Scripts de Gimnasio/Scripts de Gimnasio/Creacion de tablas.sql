@@ -113,6 +113,16 @@ CREATE TABLE Producto
   Constraint FK_ID_Categoria foreign key (ID_Categoria)  references Categoria (ID_Categoria) on delete cascade on update cascade
 )
 
+
+create table Marca 
+(
+	ID_Marca int identity (1,1) not null,
+	Nombre varchar(40) not null ,
+	Descripcion varchar (100)
+	Constraint PK_ID_Marca primary key (ID_Marca)
+
+)
+
 alter table Producto
 add Marca varchar(50)
 

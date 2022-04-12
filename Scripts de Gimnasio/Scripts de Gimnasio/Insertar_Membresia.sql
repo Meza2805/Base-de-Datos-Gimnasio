@@ -9,3 +9,6 @@ insert into Membresia
 
 insert into Membresia
 	values ('M','MENSUAL',30)
+
+insert into Membresia
+	values ('D','UN DIA',2)

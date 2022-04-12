@@ -61,3 +61,11 @@ EXEC SP_Insertar_Cliente 'francisco','george','lopez','lopez','m','16/06/2002'
 EXEC SP_Insertar_Cliente 'melvin','uriel','urbina','lara','m','16/06/1990'
 
 select * from Cliente
+
+--Insertando valores a la tabla cliente 12/04/2022
+
+EXEC SP_Insertar_Cliente 'meyling','estefania','perez','velasquez','f','16/06/1997'
+EXEC SP_Insertar_Cliente 'isabel','','perez','velasquez','f','27/08/1992'
+
+EXEC SP_Insertar_Cliente 'adolfo','yamil','hernandez','lopez','m','27/08/1993'
+EXEC SP_Insertar_Cliente 'eduardo','francisco','romero','venancio','m','24/09/1990'

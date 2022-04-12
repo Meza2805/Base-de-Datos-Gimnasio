@@ -126,6 +126,28 @@ exec SP_Insertar_Producto 'faja de neopreno',20,'',9,2,
 exec SP_Insertar_Producto 'balon de futbol',20,'',9,2,
 'balon de futbol no. 6','runic'
 
+exec SP_Insertar_Producto 'sujetador deportivo',30,'',12,4,
+'sujetador talla s para dama','nike'
+
+exec SP_Insertar_Producto 'sujetador deportivo',27,'',12,4,
+'sujetador talla s para dama','puma'
+
+exec SP_Insertar_Producto 'camisa fitness',20,'',12,4,
+'sujetador talla m para dama','adidas'
+
+exec SP_Insertar_Producto 'mallas fitnes',30,'',12,4,
+'malla fitness para mujer','adidas'
+
+exec SP_Insertar_Producto 'sudadera para hombre',40,'',0,4,
+'sudadera para hombre talla l','joma'
+
+exec SP_Insertar_Producto 'camisera de tirantes',20,'',17,4,
+'camisera forza de tirantes','forza'
+
+exec SP_Insertar_Producto 'camisera de tirantes',20,'',17,4,
+'camisera forza de tirantes','forza'
+
+
 delete from Producto
 truncate table Producto
 select * from Categoria
