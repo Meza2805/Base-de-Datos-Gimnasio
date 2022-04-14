@@ -132,6 +132,22 @@ add Fecha_Compra date
 alter table Producto
 add Descripcion_Producto nvarchar (200)
 
+alter table Producto
+add Perecedero bit
+
+alter table Producto
+add ID_Marca int
+
+select * from Producto
+
+alter table Producto
+drop column Marca
+
+select * from Marca
+
+alter table Producto 
+add Constraint FK_Marca foreign key (ID_Marca) references Marca (ID_Marca) on delete cascade on update cascade
+
 
 CREATE TABLE Detalle_Factura
 (
@@ -219,3 +235,11 @@ set @fecha_prueba_02 = GETDATE();
  print @fecha_prueba_02
  select * from suscripcion
  select * from Producto
+
+
+ declare @perecedero bit
+ set @perecedero = 0
+ print @perecedero
+
+
+ select * from Marca
