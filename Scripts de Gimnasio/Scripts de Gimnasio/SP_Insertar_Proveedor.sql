@@ -17,3 +17,8 @@ exec SP_Insertar_Proveedor 'HAMMER NUTRITION','22268210','PLAZA NATURA MODULOS A
 exec SP_Insertar_Proveedor 'suplemententos molina','83233858','avenida universitaria casimiro sotelo, frente al porton principal de la Universidad nacionande ingenieria, managua'
 exec SP_Insertar_Proveedor 'suplementos deportivos','22774502','altamira deste no.443, managua'
 exec SP_Insertar_Proveedor 'deportes rivera','22497102','iglesia el calvario 2c. al lago 75 varas al este, managua'
+exec SP_Insertar_Proveedor 'coca - cola','22801005','carretera norte km 3'
+exec SP_Insertar_Proveedor 'coca - cola','22801005','carretera norte km 3'
+exec SP_Insertar_Proveedor 'pepsi','22108594','carretera norte km 12'
+
+update Proveedor set Nombre =  'PEPSICO INC.' WHERE ID_Proveedor = 1002

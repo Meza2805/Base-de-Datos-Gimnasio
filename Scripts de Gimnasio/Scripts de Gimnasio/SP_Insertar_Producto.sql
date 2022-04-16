@@ -23,7 +23,7 @@ as
 			set @perecedero = 0
 		end
 
-	if not exists (select top 1 Nombre from Producto where Nombre = @nombre and ID_Marca = @id_marca)
+	if not exists (select top 1 Nombre from Producto where Nombre = @nombre and ID_Marca = @id_marca and Descripcion_Producto=@descp)
 		begin
 			insert into Producto (Nombre,[Precio Venta],[Precio Compra],[Fecha Vencimiento],Stock,ID_Categoria,Fecha_Compra,Descripcion_Producto,ID_Marca,Perecedero)
 			values (ltrim(rtrim(upper(@nombre))),(@precio_compra + (@precio_compra*0.20)),@precio_compra,@fecha_vencimiento,@stock,@id_categoria,GETDATE(),ltrim(rtrim(upper(@descp))),LTRIM(rtrim(
@@ -151,11 +151,27 @@ exec SP_Insertar_Producto 'camisera de tirantes',20,'',17,4,
 exec SP_Insertar_Producto 'camisera de tirantes',20,'',17,4,
 'camisera forza de tirantes',5
 
+select * from Producto
 ----USANDO EL PROCEDIMIENTO ALMACENADO FINALIZADO
 exec SP_Insertar_Producto 'coca-cola 12 onz',1.5,'12/05/2023',20,3,'bedida carbonatada',15
 
+exec SP_Insertar_Producto 'coca-cola 500 ml',1.5,'12/05/2023',20,3,'bedida carbonatada',15
+
+exec SP_Insertar_Producto 'jugo del valle 500 ml',1.5,'12/05/2023',25,3,'jugo de naranja',15
+
+exec SP_Insertar_Producto 'jugo del valle 500 ml',1.5,'12/05/2023',25,3,'jugo de limon',15
+exec SP_Insertar_Producto 'fanta naranja 500 ml',1.5,'12/05/2023',20,3,'bedida carbonatada',15
+exec SP_Insertar_Producto 'fanta roja',1.5,'12/05/2023',20,3,'bedida carbonatada',15
+exec SP_Insertar_Producto '7up 500 ml',1.5,'12/05/2023',25,3,'bedida carbonatada',16
+exec SP_Insertar_Producto 'pepsi 500 ml',1.5,'12/05/2023',25,3,'bedida carbonatada',16
+exec SP_Insertar_Producto 'mirinda 500 ml',1.5,'12/05/2023',25,3,'bedida carbonatada',15
+exec SP_Insertar_Producto 'rojita 500 ml',1.5,'12/05/2023',25,3,'bedida carbonatada',16
+exec SP_Insertar_Producto 'powerade 500 ml',1.5,'12/06/2023',25,3,'bebida rehidratante',15
+exec SP_Insertar_Producto 'raptor 500 ml',1.5,'12/06/2023',25,3,'bebida energizante',17
 
 
+update Producto set Nombre =  'FANTA ROJA 500 ML' where ID_Producto =82
+update Producto set ID_Marca = 16 where ID_Producto=84
 
 select * from Categoria
 select * from Membresia

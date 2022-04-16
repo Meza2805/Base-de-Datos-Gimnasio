@@ -184,3 +184,27 @@ select * from Registo_Asistencia
 	exec SP_Insertar_Registro_Asistencia 31
 	exec SP_Insertar_Registro_Asistencia 32
 	exec SP_Insertar_Registro_Asistencia 33
+
+	--Insertando asistencia de los clientes el dia  15/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
+	--exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 20
+	exec SP_Insertar_Registro_Asistencia 23
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 27
+	exec SP_Insertar_Registro_Asistencia 28
+	exec SP_Insertar_Registro_Asistencia 29
+	exec SP_Insertar_Registro_Asistencia 30
+	exec SP_Insertar_Registro_Asistencia 31
+	--exec SP_Insertar_Registro_Asistencia 32
+	exec SP_Insertar_Registro_Asistencia 33
