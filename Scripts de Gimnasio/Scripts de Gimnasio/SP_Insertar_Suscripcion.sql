@@ -99,3 +99,19 @@ exec SP_Insertar_Suscripcion 31,2,'S'
 exec SP_Insertar_Suscripcion 32,2,'S'
 exec SP_Insertar_Suscripcion 33,2,'Q'
 exec SP_Insertar_Suscripcion 34,2,'D'
+
+-- sesion de inssercion de suscripcion de membresia 18/04/2022
+exec SP_Insertar_Suscripcion 1,1,'Q'
+exec SP_Insertar_Suscripcion 3,1,'M'
+exec SP_Insertar_Suscripcion 5,1,'Q'
+exec SP_Insertar_Suscripcion 6,1,'M'
+exec SP_Insertar_Suscripcion 8,1,'Q'
+exec SP_Insertar_Suscripcion 11,1,'Q'
+exec SP_Insertar_Suscripcion 14,1,'M'
+exec SP_Insertar_Suscripcion 15,1,'Q'
+exec SP_Insertar_Suscripcion 16,1,'M'
+exec SP_Insertar_Suscripcion 18,1,'Q'
+exec SP_Insertar_Suscripcion 19,1,'M'
+
+
+select * from Cliente where ID_Estado = 'I'

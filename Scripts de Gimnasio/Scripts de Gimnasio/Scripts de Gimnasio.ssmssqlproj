@@ -19,6 +19,12 @@
     </LogicalFolder>
     <LogicalFolder Name="Consultas" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="Backup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Backup.sql</FullPath>
+        </FileNode>
         <FileNode Name="Consulta de Puebas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -30,6 +36,12 @@
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Creacion de tablas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Funcion_Convertir_Fechar.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Funcion_Convertir_Fechar.sql</FullPath>
         </FileNode>
         <FileNode Name="Insertar_Estado_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -49,6 +61,24 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Insertar_Membresia.sql</FullPath>
         </FileNode>
+        <FileNode Name="Insertar_Pago.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Insertar_Pago.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Operacion con Esquemas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Operacion con Esquemas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Prueba_Tabla_Temporal.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Prueba_Tabla_Temporal.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Insertar_Categoria.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -66,6 +96,12 @@
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Insertar_Factura.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Factura.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Insertar_Marca.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>

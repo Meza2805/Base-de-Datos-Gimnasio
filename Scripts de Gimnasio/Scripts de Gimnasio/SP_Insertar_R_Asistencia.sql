@@ -1,5 +1,9 @@
 select * from Registo_Asistencia
 
+select * from vista.Categoria
+
+
+
 alter proc SP_Insertar_Registro_Asistencia
 @ID_Cliente int
 as
@@ -197,7 +201,7 @@ select * from Registo_Asistencia
 	exec SP_Insertar_Registro_Asistencia 13
 	exec SP_Insertar_Registro_Asistencia 12
 	exec SP_Insertar_Registro_Asistencia 17
-	--exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 11
 	exec SP_Insertar_Registro_Asistencia 20
 	exec SP_Insertar_Registro_Asistencia 23
 	exec SP_Insertar_Registro_Asistencia 26
@@ -206,5 +210,91 @@ select * from Registo_Asistencia
 	exec SP_Insertar_Registro_Asistencia 29
 	exec SP_Insertar_Registro_Asistencia 30
 	exec SP_Insertar_Registro_Asistencia 31
-	--exec SP_Insertar_Registro_Asistencia 32
+	exec SP_Insertar_Registro_Asistencia 32
 	exec SP_Insertar_Registro_Asistencia 33
+
+
+	
+	--Insertando asistencia de los clientes el dia  18/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 20
+	exec SP_Insertar_Registro_Asistencia 23
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 27
+	exec SP_Insertar_Registro_Asistencia 28
+	exec SP_Insertar_Registro_Asistencia 29
+	exec SP_Insertar_Registro_Asistencia 30
+	exec SP_Insertar_Registro_Asistencia 31
+	exec SP_Insertar_Registro_Asistencia 32
+	exec SP_Insertar_Registro_Asistencia 33
+
+	--para conocer la cantidad de clientes activados
+	select count (ID_Cliente) as Activo from Cliente where ID_Estado = 'A' 
+	select count (ID_Cliente) as Inactivo from Cliente where ID_Estado = 'I'
+	select count (ID_Cliente) as Inactivo from Cliente where ID_Estado = 'B'
+
+	select * from Cliente where ID_Estado = 'I'
+
+		
+	--Insertando asistencia de los clientes el dia  20/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 20
+	exec SP_Insertar_Registro_Asistencia 23
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 27
+	exec SP_Insertar_Registro_Asistencia 28
+	exec SP_Insertar_Registro_Asistencia 29
+	exec SP_Insertar_Registro_Asistencia 30
+	exec SP_Insertar_Registro_Asistencia 31
+	exec SP_Insertar_Registro_Asistencia 32
+	exec SP_Insertar_Registro_Asistencia 33
+
+	select * from Cliente where ID_Estado = 'A'
+	SELECT * FROM Registo_Asistencia
+
+
+	--Insertando asistencia de los clientes el dia  20/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 5
+	exec SP_Insertar_Registro_Asistencia 6
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 8
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 14
+	exec SP_Insertar_Registro_Asistencia 15
+	exec SP_Insertar_Registro_Asistencia 16
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 19
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 33
+
