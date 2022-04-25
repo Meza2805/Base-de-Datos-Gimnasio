@@ -51,7 +51,7 @@ set @bandera =  0
 			end
 			--La siguiente linea registra la primera asistencia del cliente el mismo dia que realiza la suscripcion
 			insert into Registo_Asistencia (Fecha,Hora,ID_Cliente)
-				values (GETDATE(),cast(datepart (hour, getdate()) as char(2))+ ' : ' +cast (datepart (mi,getdate()) as char(2)),@id_cliente)
+				values (GETDATE(),(cast(datepart (hour, getdate()) as nvarchar(2))+ ' : ' +cast (datepart (mi,getdate()) as nvarchar(2))),@id_cliente)
 		end
 	else
 		begin
@@ -114,4 +114,31 @@ exec SP_Insertar_Suscripcion 18,1,'Q'
 exec SP_Insertar_Suscripcion 19,1,'M'
 
 
+
+
+-- sesion de inssercion de suscripcion de membresia 25/04/2022
+exec SP_Insertar_Suscripcion 4,1,'M'
+exec SP_Insertar_Suscripcion 7,1,'M'
+exec SP_Insertar_Suscripcion 10,1,'M'
+exec SP_Insertar_Suscripcion 12,1,'M'
+exec SP_Insertar_Suscripcion 13,1,'M'
+exec SP_Insertar_Suscripcion 17,1,'M'
+exec SP_Insertar_Suscripcion 20,1,'M'
+exec SP_Insertar_Suscripcion 22,1,'M'
+exec SP_Insertar_Suscripcion 23,2,'Q'
+exec SP_Insertar_Suscripcion 24,2,'Q'
+exec SP_Insertar_Suscripcion 25,2,'Q'
+exec SP_Insertar_Suscripcion 26,2,'Q'
+exec SP_Insertar_Suscripcion 27,2,'Q'
+exec SP_Insertar_Suscripcion 28,2,'Q'
+exec SP_Insertar_Suscripcion 29,2,'Q'
+exec SP_Insertar_Suscripcion 29,2,'Q'
+exec SP_Insertar_Suscripcion 31,2,'Q'
+exec SP_Insertar_Suscripcion 32,2,'Q'
+exec SP_Insertar_Suscripcion 34,2,'Q'
+exec SP_Insertar_Suscripcion 30,2,'Q'
+exec SP_Insertar_Suscripcion 21,1,'Q'
+
 select * from Cliente where ID_Estado = 'I'
+select count(ID_Cliente) from Cliente where ID_Estado = 'I'
+

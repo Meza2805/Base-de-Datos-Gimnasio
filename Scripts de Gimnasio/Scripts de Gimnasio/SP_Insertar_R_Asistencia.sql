@@ -275,7 +275,7 @@ select * from Registo_Asistencia
 	SELECT * FROM Registo_Asistencia
 
 
-	--Insertando asistencia de los clientes el dia  20/04/2022
+	--Insertando asistencia de los clientes el dia  25/04/2022
 	exec SP_Insertar_Registro_Asistencia 1
 	exec SP_Insertar_Registro_Asistencia 2
 	exec SP_Insertar_Registro_Asistencia 3
@@ -298,3 +298,5 @@ select * from Registo_Asistencia
 	exec SP_Insertar_Registro_Asistencia 26
 	exec SP_Insertar_Registro_Asistencia 33
 
+	select * from Cliente where ID_Estado = 'A'
+	SELECT * FROM Registo_Asistencia
