@@ -243,3 +243,40 @@ set @fecha_prueba_02 = GETDATE();
 
 
  select * from Marca
+
+
+
+ --creacion de tabla compra
+ CREATE TABLE Factura_Compra
+(
+  [ID_Factura] int identity (1,1) not null,
+  Fecha date,
+  ID_Empleado int,
+  ID_Proveedor int,
+  ID_MPago int,
+  SubTotal money,
+  IVA money,
+  Total money,
+  Constraint PK_Factura02 PRIMARY KEY ([ID_Factura]),
+  Constraint FK_Empleado03 foreign key (ID_Empleado) References Empleado (ID_Empleado) on delete cascade on update cascade,
+  Constraint FK_Proveedor02 foreign key (ID_Proveedor) references Proveedor (ID_Proveedor) on delete cascade on update cascade,
+  Constraint FK_ID_MPago02 foreign key (ID_MPago) references Modo_Pago (ID_MPago) on delete cascade on update cascade
+)
+
+---CREANDO TABLA DE DETALLE_FACTURA_COMPRA DE PRODUCTOS
+CREATE TABLE Detalle_Factura_Compra
+(
+  [ID_Detalle] int identity (1,1) not null,
+  [ID_Factura_Compra] int,
+  [ID_Producto] int,
+  [Cant_Producto] int,
+  Constraint PK_Detalle_Factura_Compra PRIMARY KEY ([ID_Detalle]),
+  Constraint FK_ID_Factura_Compra02 foreign key ([ID_Factura_Compra]) references Factura_Compra (ID_Factura) on delete cascade on update cascade,
+  Constraint FK_Producto02 foreign key (ID_Producto) references Producto (ID_Producto) on delete cascade on update cascade
+)
+
+
+
+select * from Empleado
+select * from Proveedor
+select * from Factura_Compra

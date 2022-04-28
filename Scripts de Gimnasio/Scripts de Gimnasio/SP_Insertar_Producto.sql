@@ -1,4 +1,7 @@
 
+select * from Detalle_Factura_Venta
+
+
 select * from Categoria
 select * from Producto
 SP_Help Producto
@@ -41,43 +44,43 @@ select * from Categoria
 
 ---Insertando valores a la tabla producto
 exec SP_Insertar_Producto 'hammer gel con cafeina',25,'15/09/2022',20,1,
-'hidratos de carbono complejos y los ingredientes naturales. El resultado es una fuente de energía de diferentes sabores, que digiere más fácil que cualquier otro gel energizante.',7
+'hidratos de carbono complejos y los ingredientes naturales. El resultado es una fuente de energï¿½a de diferentes sabores, que digiere mï¿½s fï¿½cil que cualquier otro gel energizante.',7
 
 exec SP_Insertar_Producto 'Hammer Vegan Protein',20,'15/09/2022',15,1,
-'Con cinco fuentes de proteína 100% de origen vegetal, incluyendo proteínas de guisante, proteína de arroz integral orgánico, espirulina orgánica, Chlorella orgánica, y alfalfa',7
+'Con cinco fuentes de proteï¿½na 100% de origen vegetal, incluyendo proteï¿½nas de guisante, proteï¿½na de arroz integral orgï¿½nico, espirulina orgï¿½nica, Chlorella orgï¿½nica, y alfalfa',7
 
 exec SP_Insertar_Producto 'Hammer bar',18,'15/12/2022',15,1,
-'Las Barras nutritivas de Hammer están compuestas con ingrediente sanos, libres de modificaciones genéticas produciendo ingredientes 
-sin azúcares refinados añadidos. Además, están aprobadas por la USDA, son productos sin lácteos y certificadas como alimentos vegetarianos.',7
+'Las Barras nutritivas de Hammer estï¿½n compuestas con ingrediente sanos, libres de modificaciones genï¿½ticas produciendo ingredientes 
+sin azï¿½cares refinados aï¿½adidos. Ademï¿½s, estï¿½n aprobadas por la USDA, son productos sin lï¿½cteos y certificadas como alimentos vegetarianos.',7
 
 exec SP_Insertar_Producto 'Premium Insurance Caps',25,'15/09/2023',5,1,
-'Multivitamínico fuerte/suplemento mineral
-Apoya una salud óptima
-Aumenta la energía durante el día
-Apoya la función inmune',7
+'Multivitamï¿½nico fuerte/suplemento mineral
+Apoya una salud ï¿½ptima
+Aumenta la energï¿½a durante el dï¿½a
+Apoya la funciï¿½n inmune',7
 
 exec SP_Insertar_Producto 'Race Caps Supreme',20,'15/09/2023',10,1,
 'Fuerte potenciador muscular
 Prolonga la resistencia
-Aumenta la energía
+Aumenta la energï¿½a
 Apoya la salud cognitiva y cardiovascular',7
 
 exec SP_Insertar_Producto 'Anti-Fatigue Caps',18,'15/12/2022',12,1,
-'Combina dos nutrientes de captación del amoniaco
+'Combina dos nutrientes de captaciï¿½n del amoniaco
 Prolonga la resistencia en los entrenamientos y las carreras de larga distancia
-Ayuda a la producción de energía
+Ayuda a la producciï¿½n de energï¿½a
 Ayuda a prevenir los calambres musculares
 Contrarresta la fatiga cotidiana',7
 
 exec SP_Insertar_Producto 'Fully Charged',24,'15/12/2022',25,1,
-'Aumenta la energía y el rendimiento
-Focalización mental
+'Aumenta la energï¿½a y el rendimiento
+Focalizaciï¿½n mental
 Minimiza el dolor muscular',7
 
 ---------------------------------
 exec SP_Insertar_Producto 'Creatina monohidratada',30,'15/12/2022',25,1,
-'suplementación con creatina ayudará a realizar más esfuerzos (más repeticiones, por ejemplo, algo que en consecuencia 
-aumentará el rendimiento y la masa muscular',7
+'suplementaciï¿½n con creatina ayudarï¿½ a realizar mï¿½s esfuerzos (mï¿½s repeticiones, por ejemplo, algo que en consecuencia 
+aumentarï¿½ el rendimiento y la masa muscular',7
 
 exec SP_Insertar_Producto 'aminoacidos',32,'15/12/2023',30,1,
 'suplemente deportivo para ejercicios intensos',3
@@ -118,8 +121,8 @@ exec SP_Insertar_Producto 'aro de pilates',16,'',4,2,
 exec SP_Insertar_Producto 'espinillera',20,'',10,2,
 'espinillera neominius talla s',13
 
-exec SP_Insertar_Producto 'muñequera',18,'',10,2,
-'muñequera nivel 3 talla s',9
+exec SP_Insertar_Producto 'muï¿½equera',18,'',10,2,
+'muï¿½equera nivel 3 talla s',9
 
 exec SP_Insertar_Producto 'cinturon',23,'',10,2,
 'cinturon talla l',9
@@ -199,7 +202,7 @@ update Producto set Nombre = 'GUANTELETA' where ID_Producto = 1
 
 
 update Producto
-	set Descripcion_Producto = Upper('hidratos de carbono complejos y los ingredientes naturales. El resultado es una fuente de energía de diferentes sabores, que digiere más fácil que cualquier otro gel energizante.')
+	set Descripcion_Producto = Upper('hidratos de carbono complejos y los ingredientes naturales. El resultado es una fuente de energï¿½a de diferentes sabores, que digiere mï¿½s fï¿½cil que cualquier otro gel energizante.')
 	where ID_Producto = 3
 
 /*

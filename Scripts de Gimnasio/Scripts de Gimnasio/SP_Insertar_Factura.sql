@@ -92,3 +92,25 @@ select * from Factura
 select * from Detalle_Factura
 
 exec SP_Insertar_Factura02 1
+
+
+
+select * from Factura
+select * from Detalle_Factura
+select * from Producto
+select * from Cliente
+select * from Modo_Pago
+
+--Insertando Datos para Facturacion
+-------------------------------------------------------
+--Insertando datos para la factura parte 01 
+exec SP_Insertar_Factura01 12,1,1
+
+--Insertando datos para el detalle de factura
+exec SP_Insertar_Detalle_Factura 2,53,1
+exec SP_Insertar_Detalle_Factura 2,54,1
+exec SP_Insertar_Detalle_Factura 2,83,2
+exec SP_Insertar_Detalle_Factura 2,88,2
+
+--Insertando datos de facturacion parte 02
+exec SP_Insertar_Factura02 2
