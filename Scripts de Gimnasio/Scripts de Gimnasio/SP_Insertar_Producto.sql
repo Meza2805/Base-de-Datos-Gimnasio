@@ -1,36 +1,28 @@
 
-select * from Detalle_Factura_Venta
-
-
-select * from Categoria
-select * from Producto
-SP_Help Producto
-
 alter proc SP_Insertar_Producto
 @nombre nvarchar(100),
 @precio_compra money,
 @fecha_vencimiento date,
 @stock int,
-@id_categoria int,
---@fecha_compra date,
 @descp varchar(200),
+@id_categoria int,
 @id_marca int
 as
 	begin
 	set nocount on
 	declare @perecedero bit
 	set @perecedero = 1
-	if @id_categoria = 2 or @id_categoria = 4
+	--Con la siguiente condicion establecemos si el producto insertado es o no en perecedero
+	if @id_categoria = 2 or @id_categoria = 4 --Estas categorias manejan productos no perecederos
 		begin
 			set @fecha_vencimiento =  NULL
 			set @perecedero = 0
 		end
-
+	--La siguiente condicion verifica si no existe un producto con el misno nombre, descripcion y marca en la tabla
 	if not exists (select top 1 Nombre from Producto where Nombre = @nombre and ID_Marca = @id_marca and Descripcion_Producto=@descp)
 		begin
-			insert into Producto (Nombre,[Precio Venta],[Precio Compra],[Fecha Vencimiento],Stock,ID_Categoria,Fecha_Compra,Descripcion_Producto,ID_Marca,Perecedero)
-			values (ltrim(rtrim(upper(@nombre))),(@precio_compra + (@precio_compra*0.20)),@precio_compra,@fecha_vencimiento,@stock,@id_categoria,GETDATE(),ltrim(rtrim(upper(@descp))),LTRIM(rtrim(
-					upper(@id_marca))),@perecedero)
+			insert into Producto (Nombre,[Precio Venta],[Precio Compra],[Fecha Vencimiento],Stock,Fecha_Compra,Descripcion_Producto,Perecedero,ID_Categoria,ID_Marca)
+			values (ltrim(rtrim(upper(@nombre))),(@precio_compra + (@precio_compra*0.20)),@precio_compra,@fecha_vencimiento,@stock,GETDATE(),ltrim(rtrim(upper(@descp))),@perecedero,@id_categoria,LTRIM(rtrim(upper(@id_marca))))
 			PRINT 'PRODUCTO REGISTRADO'
 		end
 	else
@@ -38,6 +30,18 @@ as
 			print 'EL PRODUCTO YA EXISTE'
 		end
 	end
+
+-----------------------------------------------------------------------------------------
+
+
+select * from Detalle_Factura_Venta
+
+
+select * from Categoria
+select * from Producto
+SP_Help Producto
+
+
 select * from Producto
 delete from Producto
 select * from Categoria
@@ -158,7 +162,7 @@ select * from Producto
 ----USANDO EL PROCEDIMIENTO ALMACENADO FINALIZADO
 exec SP_Insertar_Producto 'coca-cola 12 onz',1.5,'12/05/2023',20,3,'bedida carbonatada',15
 
-exec SP_Insertar_Producto 'coca-cola 500 ml',1.5,'12/05/2023',20,3,'bedida carbonatada',15
+exec SP_Insertar_Producto 'big-cola 500 ml',1,'12/05/2023',20,3,'bedida carbonatada',15
 
 exec SP_Insertar_Producto 'jugo del valle 500 ml',1.5,'12/05/2023',25,3,'jugo de naranja',15
 
@@ -171,6 +175,9 @@ exec SP_Insertar_Producto 'mirinda 500 ml',1.5,'12/05/2023',25,3,'bedida carbona
 exec SP_Insertar_Producto 'rojita 500 ml',1.5,'12/05/2023',25,3,'bedida carbonatada',16
 exec SP_Insertar_Producto 'powerade 500 ml',1.5,'12/06/2023',25,3,'bebida rehidratante',15
 exec SP_Insertar_Producto 'raptor 500 ml',1.5,'12/06/2023',25,3,'bebida energizante',17
+exec SP_Insertar_Producto ' 500 ml',1.5,'12/06/2023',25,3,'bebida energizante',17
+--Insercion Luego de Modificacion de Procedimiento Almacenado
+exec SP_Insertar_Producto 'yet',1.5,'15/10/2022',25,'bebida energizante',3,17
 
 
 update Producto set Nombre =  'FANTA ROJA 500 ML' where ID_Producto =82
@@ -179,6 +186,7 @@ update Producto set ID_Marca = 16 where ID_Producto=84
 select * from Categoria
 select * from Membresia
 select * from Marca
+select * from Producto
 
 select * from Producto
 

@@ -1,6 +1,3 @@
- select Marca from Producto group by Marca
- select * from Marca
- SP_Help Marca
 
  ALTER table Marca
  DROP column  Descripcion
@@ -17,6 +14,15 @@
 		print 'MARCA REGISTRADA'
 		end
 	end
+---------------------------------------------------------------
+
+
+
+
+
+ select Marca from Producto group by Marca
+ select * from Marca
+ SP_Help Marca
 
 
 exec SP_Insertar_Marca 'ADIDAS'

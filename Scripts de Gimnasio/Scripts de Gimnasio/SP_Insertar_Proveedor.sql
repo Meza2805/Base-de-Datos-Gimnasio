@@ -1,5 +1,3 @@
-select * from Proveedor
-sp_help Proveedor
 
 ALTER proc SP_Insertar_Proveedor 
 @Nombre nvarchar (100),
@@ -12,6 +10,20 @@ set nocount on
 		values (LTRIM(RTRIM(UPPER(@Nombre))),LTRIM(RTRIM(UPPER(@Telefono))),LTRIM(RTRIM(UPPER(@Direccion))))
 		print 'PROVEEDOR REGISTRADO'
 end
+
+----------------------------------------------------------------------
+
+
+
+select * from Proveedor
+sp_help Proveedor
+
+
+
+
+
+
+
 
 exec SP_Insertar_Proveedor 'HAMMER NUTRITION','22268210','PLAZA NATURA MODULOS A24 Y A25'
 exec SP_Insertar_Proveedor 'suplemententos molina','83233858','avenida universitaria casimiro sotelo, frente al porton principal de la Universidad nacionande ingenieria, managua'

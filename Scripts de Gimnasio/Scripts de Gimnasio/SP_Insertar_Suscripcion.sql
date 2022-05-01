@@ -1,9 +1,3 @@
-select *  from suscripcion
-select * from cliente where ID_Cliente  = 2
-select * from Empleado 
-select * from Registo_Asistencia
-
-
 
 ----Procedimiento almacenado para registrar suscrpcion------
 alter proc SP_Insertar_Suscripcion
@@ -16,6 +10,7 @@ begin
 set nocount on
 declare @bandera int
 set @bandera =  0
+	--La siguiente condicion verifica si existe el cliente tiene o no una membresia activa
 	if not exists (select ID_Cliente from Cliente where ID_Estado = 'A' and ID_Cliente = @id_cliente)
 		begin --Condicion para asiganar la fecha expiracion de membresia segun el ID de membresia
 			if (@id_membresia = 'D') --Derecho a Ejercicio por 1 dia
@@ -58,6 +53,16 @@ set @bandera =  0
 		print 'ESTE CLIENTE YA TIENE UNA MEMBRESIA ACTIVA'
 		end
 end
+---------------------------------------------------------------------
+select *  from suscripcion
+select * from cliente where ID_Cliente  = 2
+select * from Empleado 
+select * from Registo_Asistencia
+
+
+
+
+
 
 
 --Insertando valores a la tabla Membresia
@@ -137,7 +142,7 @@ exec SP_Insertar_Suscripcion 31,2,'Q'
 exec SP_Insertar_Suscripcion 32,2,'Q'
 exec SP_Insertar_Suscripcion 34,2,'Q'
 exec SP_Insertar_Suscripcion 30,2,'Q'
-exec SP_Insertar_Suscripcion 21,1,'Q'
+exec SP_Insertar_Suscripcion 33,1,'Q'
 
 select * from Cliente where ID_Estado = 'I'
 select count(ID_Cliente) from Cliente where ID_Estado = 'I'

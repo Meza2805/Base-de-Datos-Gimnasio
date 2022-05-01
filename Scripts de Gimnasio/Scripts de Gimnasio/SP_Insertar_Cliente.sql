@@ -1,9 +1,3 @@
-select * from Cliente
-sp_help Cliente
-select * from Estado_Cliente
-
-update cliente set ID_Estado= 'I' where ID_Estado = 'A'
-delete  from suscripcion
 
 alter proc SP_Insertar_Cliente
 @Primer_Nombre varchar(50),
@@ -13,6 +7,8 @@ alter proc SP_Insertar_Cliente
 @Sexo char(1),
 @Fecha_Nac date,
 --@Fecha_Registro date,
+--Al registrar un cliente su estado por defecto es Inactivo
+--Esto mientras se le asigna o contrara una membresia
 @ID_Estado char(1) = I
 as
 set nocount on
@@ -21,6 +17,29 @@ set nocount on
 insert into Cliente ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],Sexo,Fecha_Nac,Fecha_Registro,ID_Estado)
 	values (LTRIM(RTRIM(UPPER(@Primer_Nombre))),LTRIM(RTRIM(UPPER(@Segundo_Nombre))),LTRIM(RTRIM(UPPER(@Primer_Apellido))),
 			LTRIM(RTRIM(UPPER(@Segundo_Apellido))),UPPER(@Sexo),@Fecha_Nac,getdate(),@ID_Estado)
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+			select * from Cliente
+sp_help Cliente
+select * from Estado_Cliente
+
+update cliente set ID_Estado= 'I' where ID_Estado = 'A'
+delete  from suscripcion
+
+
+
+
+
+
+
+
+
+
 
 
 --Insertando valores a la tabla cliente

@@ -72,6 +72,7 @@ exec SP_Insertar_Producto_Proovedor 85,1002
 exec SP_Insertar_Producto_Proovedor 86,1002
 exec SP_Insertar_Producto_Proovedor 87,1003
 exec SP_Insertar_Producto_Proovedor 88,1003
+exec SP_Insertar_Producto_Proovedor 89,1003
 
 
 select * from Producto

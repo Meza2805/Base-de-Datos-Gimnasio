@@ -1,8 +1,3 @@
-select * from Registo_Asistencia
-
-select * from vista.Categoria
-
-
 
 alter proc SP_Insertar_Registro_Asistencia
 @ID_Cliente int
@@ -14,8 +9,10 @@ as
 						'-' +cast (datepart(day,getdate())as varchar(2))
 	set nocount on
 	if not exists (select top 1 ID_Cliente from Registo_Asistencia where ID_Cliente =  @ID_Cliente and Fecha = @Fecha_Actual)
-		begin
-		if @Fecha_Actual > (select Fecha_Expiracion from suscripcion where ID_Cliente = @ID_Cliente)
+		begin --la subconsulta para el siguiente if utiliza el top1 para encontrar la fecha de vencimiento de membresia mas reciente
+		      --Ordenandolo desde la fecha mayor hasta la fecha menor, pues un cliente puede tener una o varias fechas de vencimiento de membresia
+			  --Debido a que puede renovar membresia, lo que a su vez generara siempre una nueva fecha de vencimiento
+		if @Fecha_Actual > (select top 1 Fecha_Expiracion from suscripcion where ID_Cliente = @ID_Cliente order by Fecha_Expiracion desc)
 			begin
 				update Cliente set ID_Estado ='I' where ID_Cliente =  @ID_Cliente  
 				print 'MEMBRESIA EXPIRADA'
@@ -35,6 +32,12 @@ as
 		end
 	end
 ---Fin de proceso almacenado
+---------------------------------------------------------------------------
+select * from suscripcion order by ID_Cliente
+
+select * from vista.Categoria
+
+
 
 	--Insertando asistencia de los clientes el dia  07/04/2022
 	exec SP_Insertar_Registro_Asistencia 23
@@ -302,6 +305,60 @@ select * from Registo_Asistencia
 	SELECT * FROM Registo_Asistencia
 
 		--Insertando asistencia de los clientes el dia  28/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 5
+	exec SP_Insertar_Registro_Asistencia 6
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 8
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 14
+	exec SP_Insertar_Registro_Asistencia 15
+	exec SP_Insertar_Registro_Asistencia 16
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 19
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 33
+
+	select * from Cliente where ID_Estado = 'A'
+	SELECT * FROM Registo_Asistencia
+
+
+		--Insertando asistencia de los clientes el dia  29/04/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 5
+	exec SP_Insertar_Registro_Asistencia 6
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 8
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 14
+	exec SP_Insertar_Registro_Asistencia 15
+	exec SP_Insertar_Registro_Asistencia 16
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 19
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 33
+
+	select * from Cliente where ID_Estado = 'A'
+	SELECT * FROM Registo_Asistencia
+
+
+			--Insertando asistencia de los clientes el dia  30/04/2022
 	exec SP_Insertar_Registro_Asistencia 1
 	exec SP_Insertar_Registro_Asistencia 2
 	exec SP_Insertar_Registro_Asistencia 3
