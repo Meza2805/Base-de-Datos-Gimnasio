@@ -383,3 +383,31 @@ select * from Registo_Asistencia
 
 	select * from Cliente where ID_Estado = 'A'
 	SELECT * FROM Registo_Asistencia
+
+
+
+--Insertando asistencia de los clientes el dia  02/05/2022
+	exec SP_Insertar_Registro_Asistencia 1
+	exec SP_Insertar_Registro_Asistencia 2
+	exec SP_Insertar_Registro_Asistencia 3
+	exec SP_Insertar_Registro_Asistencia 4
+	exec SP_Insertar_Registro_Asistencia 5
+	exec SP_Insertar_Registro_Asistencia 6
+	exec SP_Insertar_Registro_Asistencia 7
+	exec SP_Insertar_Registro_Asistencia 8
+	exec SP_Insertar_Registro_Asistencia 9
+	exec SP_Insertar_Registro_Asistencia 10
+	exec SP_Insertar_Registro_Asistencia 11
+	exec SP_Insertar_Registro_Asistencia 12
+	exec SP_Insertar_Registro_Asistencia 13
+	exec SP_Insertar_Registro_Asistencia 14
+	exec SP_Insertar_Registro_Asistencia 15
+	exec SP_Insertar_Registro_Asistencia 16
+	exec SP_Insertar_Registro_Asistencia 17
+	exec SP_Insertar_Registro_Asistencia 18
+	exec SP_Insertar_Registro_Asistencia 19
+	exec SP_Insertar_Registro_Asistencia 26
+	exec SP_Insertar_Registro_Asistencia 33
+
+	select * from Cliente where ID_Estado = 'A'
+	SELECT * FROM Registo_Asistencia

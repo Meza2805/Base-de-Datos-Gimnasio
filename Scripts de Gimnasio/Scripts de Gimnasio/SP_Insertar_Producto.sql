@@ -1,8 +1,8 @@
+select * from Producto with (nolock)
 
 alter proc SP_Insertar_Producto
 @nombre nvarchar(100),
-@precio_compra money,
-@fecha_vencimiento date,
+@precio money,
 @stock int,
 @descp varchar(200),
 @id_categoria int,
@@ -10,19 +10,11 @@ alter proc SP_Insertar_Producto
 as
 	begin
 	set nocount on
-	declare @perecedero bit
-	set @perecedero = 1
-	--Con la siguiente condicion establecemos si el producto insertado es o no en perecedero
-	if @id_categoria = 2 or @id_categoria = 4 --Estas categorias manejan productos no perecederos
-		begin
-			set @fecha_vencimiento =  NULL
-			set @perecedero = 0
-		end
 	--La siguiente condicion verifica si no existe un producto con el misno nombre, descripcion y marca en la tabla
-	if not exists (select top 1 Nombre from Producto where Nombre = @nombre and ID_Marca = @id_marca and Descripcion_Producto=@descp)
+	if not exists (select top 1 Nombre from Producto with (nolock) where Nombre = @nombre and ID_Marca = @id_marca and Descripcion_Producto=@descp)
 		begin
-			insert into Producto (Nombre,[Precio Venta],[Precio Compra],[Fecha Vencimiento],Stock,Fecha_Compra,Descripcion_Producto,Perecedero,ID_Categoria,ID_Marca)
-			values (ltrim(rtrim(upper(@nombre))),(@precio_compra + (@precio_compra*0.20)),@precio_compra,@fecha_vencimiento,@stock,GETDATE(),ltrim(rtrim(upper(@descp))),@perecedero,@id_categoria,LTRIM(rtrim(upper(@id_marca))))
+			insert into Producto (Nombre,Precio,Stock,Descripcion_Producto,ID_Categoria,ID_Marca)
+			values (ltrim(rtrim(upper(@nombre))),@precio,@stock,ltrim(rtrim(upper(@descp))),@id_categoria,LTRIM(rtrim(upper(@id_marca))))
 			PRINT 'PRODUCTO REGISTRADO'
 		end
 	else
