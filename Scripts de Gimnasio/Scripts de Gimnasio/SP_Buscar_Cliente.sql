@@ -11,7 +11,10 @@ as
 			end
 		else
 			begin
-				select * from Cliente where ID_Cliente = @ID_Cliente
+				select C.ID_Cliente as [CODIGO CLIENTE],C.[PRIMER NOMBRE],C.[SEGUNDO NOMBRE],C.[PRIMER APELLIDO],C.[SEGUNDO APELLIDO],C.Sexo AS SEXO, 
+				C.Fecha_Nac as [FECHA DE NACIMIENTO], C.Fecha_Registro as [FECHA DE REGISTRO], EC.Descripcion as [ESTADO DE CLIENTE] from Cliente C
+				Inner join Estado_Cliente EC  on C.ID_Estado = EC.ID_Estado 
+				where ID_Cliente = @ID_Cliente
 			end
 	end
 

@@ -2,13 +2,15 @@ select * from Producto with (nolock)
 
 alter proc SP_Insertar_Producto
 @nombre nvarchar(100),
-@precio money,
-@stock int,
 @descp varchar(200),
 @id_categoria int,
 @id_marca int
 as
 	begin
+	declare @precio money
+	declare @stock int
+	set @precio = 0
+	set @stock = 0
 	set nocount on
 	--La siguiente condicion verifica si no existe un producto con el misno nombre, descripcion y marca en la tabla
 	if not exists (select top 1 Nombre from Producto with (nolock) where Nombre = @nombre and ID_Marca = @id_marca and Descripcion_Producto=@descp)
@@ -171,8 +173,10 @@ exec SP_Insertar_Producto ' 500 ml',1.5,'12/06/2023',25,3,'bebida energizante',1
 --Insercion Luego de Modificacion de Procedimiento Almacenado
 exec SP_Insertar_Producto 'yet',1.5,'15/10/2022',25,'bebida energizante',3,17
 
+exec SP_Insertar_Producto 'FANTA AZUL','bedida carbonatada',3,15
 
-update Producto set Nombre =  'FANTA ROJA 500 ML' where ID_Producto =82
+
+update Producto set Nombre =  'FANTA AZUL 500 ML' where ID_Producto =82
 update Producto set ID_Marca = 16 where ID_Producto=84
 
 select * from Categoria
