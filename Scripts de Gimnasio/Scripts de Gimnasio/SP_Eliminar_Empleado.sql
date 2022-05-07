@@ -1,15 +1,15 @@
 alter proc SP_Eliminar_Empleado
-@ID_Empleado int
+@Cedula char(16)
 as
 	set nocount on
 	begin
-		IF not exists (select top 1(ID_Empleado) from Empleado with (nolock) where ID_Empleado =@ID_Empleado )
+		IF not exists (select top 1(Cedula) from Empleado with (nolock) where Cedula =@Cedula )
 			begin
 				print 'EL EMPLEADO NO SE ENCUENTRA EN LA BASE DE DATOS'
 			end
 		else
 			begin
-				DELETE from Empleado where ID_Empleado = @ID_Empleado
+				DELETE from Empleado where Cedula = @Cedula
 				print 'EL EMPLEADO HA SIDO ELIMINADO DE LA BASE DE DATOS'
 			end
 	end

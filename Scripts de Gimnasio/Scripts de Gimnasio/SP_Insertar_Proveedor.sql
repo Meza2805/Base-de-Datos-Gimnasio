@@ -6,9 +6,16 @@ ALTER proc SP_Insertar_Proveedor
 as
 begin
 set nocount on
-	insert into Proveedor (Nombre,Telefono,Direccion)
+	if not exists (select Nombre from Proveedor with (nolock)where Nombre = @Nombre)
+	begin
+			insert into Proveedor (Nombre,Telefono,Direccion)
 		values (LTRIM(RTRIM(UPPER(@Nombre))),LTRIM(RTRIM(UPPER(@Telefono))),LTRIM(RTRIM(UPPER(@Direccion))))
 		print 'PROVEEDOR REGISTRADO'
+	end
+	else
+	begin
+		print 'EL PRODUCOT YA EXISTE EN LA BASE DE DATOS'
+	end
 end
 
 ----------------------------------------------------------------------

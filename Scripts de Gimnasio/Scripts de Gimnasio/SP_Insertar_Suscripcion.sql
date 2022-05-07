@@ -1,8 +1,8 @@
 
 ----Procedimiento almacenado para registrar suscrpcion------
 alter proc SP_Insertar_Suscripcion
-@id_cliente int,
-@id_empleado int,
+@id_cliente char(16),
+@id_empleado char(16),
 --@fecha_contratacion date,
 @id_membresia char(1)
 as
@@ -11,7 +11,7 @@ set nocount on
 declare @bandera int
 set @bandera =  0
 	--La siguiente condicion verifica si existe el cliente tiene o no una membresia activa
-	if not exists (select ID_Cliente from Cliente where ID_Estado = 'A' and ID_Cliente = @id_cliente)
+	if not exists (select Cedula from Cliente where ID_Estado = 'A' and Cedula = @id_cliente)
 		begin --Condicion para asiganar la fecha expiracion de membresia segun el ID de membresia
 			if (@id_membresia = 'D') --Derecho a Ejercicio por 1 dia
 				begin
@@ -41,7 +41,7 @@ set @bandera =  0
 			--La siguiente linea actuliza el valor del estado de usuario en la tabla cliente
 			begin
 				update Cliente
-					set ID_Estado = 'A' where ID_Cliente = @id_cliente
+					set ID_Estado = 'A' where Cedula = @id_cliente
 					print 'SE HA INGRESADO LA MEMBRESIA'
 			end
 			--La siguiente linea registra la primera asistencia del cliente el mismo dia que realiza la suscripcion

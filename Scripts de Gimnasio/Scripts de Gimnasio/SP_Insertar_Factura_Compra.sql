@@ -1,15 +1,15 @@
 --primera parte para inserta Factura de Compra de Productos
 sp_help Factura_Compra
 alter proc SP_Insertar_Factura_Compra_01
-@id_empleado int,
+@Cedula_Empleado char(16),
 @id_proveedor int,
 @id_Mpago int
 as
 begin
 set nocount on
 	insert into Factura_Compra(Fecha,ID_Empleado,ID_Proveedor,ID_MPago)
-		values (GETDATE(),@id_empleado,@id_proveedor,@id_Mpago)
-		print 'INSERTADOS DATOS GENERALES DE FACTURA DE COMPRA DE PRODCUTOS'
+		values (GETDATE(),@Cedula_Empleado,@id_proveedor,@id_Mpago)
+		print 'DATOS GENERALES DE FACTURA DE COMPRA DE PRODCUTOS INSERTADOS'
 end
 ------------------------------------------------------------------------
 --------Fin de Procedimiento Almacenado---------------

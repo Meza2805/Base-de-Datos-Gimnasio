@@ -3,7 +3,7 @@ alter proc SP_Buscar_Producto
 @ID_Producto int
 as
 begin
-	if not exists (select * from Producto where ID_Producto = @ID_Producto)
+	if not exists (select  top 1 ID_Producto from Producto where ID_Producto = @ID_Producto)
 	begin
 		PRINT 'EL PRODUCTO SOLICITADO NO SE ENCUENTRA EN LA BASE DE DATOS'
 	end

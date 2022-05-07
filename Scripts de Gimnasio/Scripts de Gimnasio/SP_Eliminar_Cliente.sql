@@ -1,15 +1,15 @@
 alter proc SP_Eliminar_Cliente
-@ID_Cliente int
+@Cedula char(16)
 as
 	set nocount on
 	begin
-		IF not exists (select top 1(ID_Cliente) from Cliente with (nolock) where ID_Cliente = @ID_Cliente )
+		IF not exists (select top 1(Cedula) from Cliente with (nolock) where Cedula = @Cedula )
 			begin
 				print 'EL CLIENTE NO SE ENCUENTRA EN LA BASE DE DATOS'
 			end
 		else
 			begin
-				DELETE from Cliente where ID_Cliente = @ID_Cliente
+				DELETE from Cliente where Cedula = @Cedula
 				print 'EL CLIENTE HA SIDO ELIMINADO DE LA BASE DE DATOS'
 			end
 	end

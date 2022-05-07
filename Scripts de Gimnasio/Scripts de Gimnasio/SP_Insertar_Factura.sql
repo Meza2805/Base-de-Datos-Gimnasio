@@ -2,14 +2,14 @@
 
 --primera parte para inserta Factura
 alter proc SP_Insertar_Factura01
-@id_cliente int,
-@id_empleado int,
+@Cedula_Cliente char(16),
+@Cedula_Empleado char(16),
 @id_Mpago int
 as
 begin
 set nocount on
 	insert into Factura_Venta(Fecha,ID_Cliente,ID_Empleado,ID_MPago)
-		values (GETDATE(),@id_cliente,@id_empleado,@id_Mpago)
+		values (GETDATE(),@Cedula_Cliente,@Cedula_Empleado,@id_Mpago)
 		print 'INSERTADOS DATOS GENERALES DE FACTURA'
 end
 
@@ -24,7 +24,7 @@ as
 begin
 	set nocount on
 	--Consultamos si el Stock del producto es mayor a la cantidad de productos de la factura
-	if ((select Stock from Producto where ID_Producto = @id_producto)>= @cantidad_producto) 
+	if ((select top 1 Stock from Producto where ID_Producto = @id_producto)>= @cantidad_producto) 
 	begin
 		insert into Detalle_Factura_Venta(ID_Factura,ID_Producto,Cant_Producto)
 		values (@id_factura,@id_producto,@cantidad_producto)
