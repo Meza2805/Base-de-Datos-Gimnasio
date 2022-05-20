@@ -77,6 +77,37 @@ select *   from Detalle_Factura_Venta
 select * from Producto where Stock <> 0
 select * from Cliente with (nolock)
 select * from Modo_Pago
+select * from Empleado
+--Insertando Datos para Facturacion
+-------------------------------------------------------
+--Insertando datos para la factura parte 01 
+exec SP_Insertar_Factura01 '448-150493-0001V','001-180491-8974S',2
+
+--Insertando datos para el detalle de factura
+exec SP_Insertar_Detalle_Factura 8,47,1
+
+
+--Insertando datos de facturacion parte 02
+exec SP_Insertar_Factura02 8
+
+--Insertando Datos para Facturacion
+-------------------------------------------------------
+--Insertando datos para la factura parte 02 
+exec SP_Insertar_Factura01 30,2,3
+
+--Insertando datos para el detalle de factura
+exec SP_Insertar_Detalle_Factura 5,49,2
+
+
+--Insertando datos de facturacion parte 02
+exec SP_Insertar_Factura02 5
+
+
+select * from Factura_Venta
+select * from Detalle_Factura_Venta
+select * from Producto
+select * from Cliente
+select * from Modo_Pago
 
 --Insertando Datos para Facturacion
 -------------------------------------------------------
@@ -101,10 +132,3 @@ exec SP_Insertar_Detalle_Factura 5,49,2
 
 --Insertando datos de facturacion parte 02
 exec SP_Insertar_Factura02 5
-
-
-select * from Factura_Venta
-select * from Detalle_Factura_Venta
-select * from Producto
-select * from Cliente
-select * from Modo_Pago

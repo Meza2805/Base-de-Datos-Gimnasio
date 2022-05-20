@@ -79,6 +79,12 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Prueba_Tabla_Temporal.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Actualizar_Cliente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Cliente.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Buscar_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -126,6 +132,12 @@
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Busqueda_Prooveedor.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cantidad_Clientes_Activos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cantidad_Clientes_Activos.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Eliminar_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>

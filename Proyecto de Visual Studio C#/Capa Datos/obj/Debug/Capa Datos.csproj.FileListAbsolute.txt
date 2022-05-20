@@ -1,0 +1,6 @@
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\bin\Debug\Capa Datos.dll
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.csproj.AssemblyReference.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.dll
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Capa Datos\obj\Debug\Capa Datos.pdb

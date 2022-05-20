@@ -1,0 +1,11 @@
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\bin\Debug\Ginmasio.exe.config
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\bin\Debug\Ginmasio.exe
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\bin\Debug\Ginmasio.pdb
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.csproj.AssemblyReference.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.csproj.SuggestedBindingRedirects.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.Frm_Principal.resources
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.Properties.Resources.resources
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.csproj.GenerateResource.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.csproj.CoreCompileInputs.cache
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.exe
+C:\BD\Repositorio para Base de Datos Sql Server\Gimnasio\Base-de-Datos-Gimnasio\Proyecto de Visual Studio C#\Ginmasio\obj\Debug\Ginmasio.pdb
