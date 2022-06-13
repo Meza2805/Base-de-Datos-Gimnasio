@@ -1,5 +1,3 @@
-
-
 --primera parte para inserta Factura
 alter proc SP_Insertar_Factura01
 @Cedula_Cliente char(16),
@@ -52,7 +50,8 @@ as
 		--uso de variable tipo tabla para calcular el precio y el total
 		declare @detalle table (id int identity (1,1), codigo_producto int,cantidad int,precio_producto money,total money)
 		insert into @detalle (codigo_producto,DF.cantidad,precio_producto,total)
-		select DF.ID_Producto,DF.Cant_Producto, P.Precio,(P.Precio * DF.Cant_Producto) from Detalle_Factura_Venta DF inner join Producto P
+		select DF.ID_Producto,DF.Cant_Producto, P.Precio,(P.Precio * DF.Cant_Producto) from Detalle_Factura_Venta 
+		DF inner join Producto P
 		on p.ID_Producto=df.ID_Producto where ID_Factura = @id_factura
 
 		--Insertando valores en la tabla factura
@@ -64,6 +63,22 @@ as
 			where ID_Factura  = @id_factura
 		print 'FACTURA REGISTRADA CORRECTAMENTE'
 	end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+select * from Registo_Asistencia
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 select * from Factura
@@ -132,3 +147,18 @@ exec SP_Insertar_Detalle_Factura 5,49,2
 
 --Insertando datos de facturacion parte 02
 exec SP_Insertar_Factura02 5
+
+
+select * from Cliente
+select * from Empleado
+select * from Modo_Pago
+select * from Producto
+select * from Factura_Venta
+select * from Detalle_Factura_Venta
+
+exec SP_Insertar_Factura01 '449-010920-0100A','001-180491-8974S',1
+exec SP_Insertar_Detalle_Factura 16,88,1
+exec SP_Insertar_Detalle_Factura 16,87,2
+
+
+exec SP_Insertar_Factura02 16

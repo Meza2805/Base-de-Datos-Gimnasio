@@ -14,5 +14,3 @@ begin
 		end
 end
 
-
-exec SP_Busqueda_Membresia 'M'

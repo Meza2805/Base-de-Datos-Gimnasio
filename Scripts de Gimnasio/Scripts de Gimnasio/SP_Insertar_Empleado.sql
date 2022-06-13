@@ -14,8 +14,11 @@ ALTER proc SP_Insertar_Empleado
 	set nocount on
 	if not exists (select top 1 Cedula from Empleado with (nolock) where Cedula =  @Cedula)
 		begin
-				insert into Empleado (Cedula,[Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],Telefono,Direccion,[Fecha Contratacion],ID_Estado_Empleado)
-				values (@Cedula,ltrim(rtrim(upper(@Pnombre))),ltrim(rtrim(upper(@Snombre))),ltrim(rtrim(upper(@Papellido))),ltrim(rtrim(upper(@Sapellido))),@telefono,@direccion,@fecha_Contratacion,@Estado_Empleado)
+				insert into Empleado (Cedula,[Primer Nombre],[Segundo Nombre],[Primer Apellido],
+				[Segundo Apellido],Telefono,Direccion,[Fecha Contratacion],ID_Estado_Empleado)
+				values (@Cedula,ltrim(rtrim(upper(@Pnombre))),ltrim(rtrim(upper(@Snombre))),
+				ltrim(rtrim(upper(@Papellido))),ltrim(rtrim(upper(@Sapellido))),
+				@telefono,@direccion,@fecha_Contratacion,@Estado_Empleado)
 		end
 	else
 		begin

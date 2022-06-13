@@ -1,4 +1,3 @@
-
 ALTER proc SP_Insertar_Proveedor 
 @Nombre nvarchar (100),
 @Telefono char(8),

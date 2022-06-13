@@ -1,4 +1,3 @@
-select * from Marca
 alter proc SP_Busqueda_Marca
 @ID_Marca int
 as
@@ -12,6 +11,3 @@ begin
 			select ID_Marca as CODIGO, Nombre AS MARCA from Marca with (nolock) where ID_Marca = @ID_Marca
 		end
 end
-
-
-exec SP_Busqueda_Marca 1

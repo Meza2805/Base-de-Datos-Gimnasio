@@ -15,6 +15,7 @@ as
 		if @Fecha_Actual > (select top 1 Fecha_Expiracion from suscripcion where ID_Cliente = @Cedula_Cliente order by Fecha_Expiracion desc)
 			begin
 				update Cliente set ID_Estado ='I' where Cedula =  @Cedula_Cliente  
+				update suscripcion set Finalizada = 1 where ID_Cliente =  @Cedula_Cliente  
 				print 'MEMBRESIA EXPIRADA'
 				print 'EL CLIENTE HA PASADO A ESTADO INACTIVO'
 				print 'HASTA QUE CONTRATE UNA NUEVA MEMBRESIA'
@@ -411,3 +412,74 @@ select * from Registo_Asistencia
 
 	select * from Cliente where ID_Estado = 'A'
 	SELECT * FROM Registo_Asistencia
+
+--Insertando asistencia de los clientes el dia  23/05/2022
+	exec SP_Insertar_Registro_Asistencia '001-160499-0101V'
+	exec SP_Insertar_Registro_Asistencia '001-160599-4777L'--*
+	exec SP_Insertar_Registro_Asistencia '001-160601-4005V'
+	exec SP_Insertar_Registro_Asistencia '001-160601-4701F'--*
+	exec SP_Insertar_Registro_Asistencia '001-160602-0101K'--*
+	exec SP_Insertar_Registro_Asistencia '001-160605-0101L'
+	exec SP_Insertar_Registro_Asistencia '001-160680-7494Q'--*
+	exec SP_Insertar_Registro_Asistencia '001-160685-7415Q'
+	exec SP_Insertar_Registro_Asistencia '001-160688-5881A'--*
+	exec SP_Insertar_Registro_Asistencia '001-160689-0220S'--*
+	exec SP_Insertar_Registro_Asistencia '001-160690-2000A'
+	exec SP_Insertar_Registro_Asistencia '001-160698-1000Q'--*
+	exec SP_Insertar_Registro_Asistencia '001-161098-0405L'--*
+	exec SP_Insertar_Registro_Asistencia '001-171290-0110V'--*
+	exec SP_Insertar_Registro_Asistencia '001-190699-0101O'
+	exec SP_Insertar_Registro_Asistencia '001-240990-0117K'--*
+	exec SP_Insertar_Registro_Asistencia '001-250504-7485Q'--*
+	exec SP_Insertar_Registro_Asistencia '001-270892-4584V'--*
+	exec SP_Insertar_Registro_Asistencia '001-270893-0110J'--*
+	exec SP_Insertar_Registro_Asistencia '448-160601-5247Q'--*
+	exec SP_Insertar_Registro_Asistencia '448-160686-0007W'--*
+	exec SP_Insertar_Registro_Asistencia '448-160697-0174J'--*
+	exec SP_Insertar_Registro_Asistencia '448-160698-0104J'--*
+	exec SP_Insertar_Registro_Asistencia '448-160698-4500L'--*
+	exec SP_Insertar_Registro_Asistencia '448-280620-0669L'--*
+	exec SP_Insertar_Registro_Asistencia '449-010920-0100A'--*
+	exec SP_Insertar_Registro_Asistencia '449-160601-2001S'--*
+	exec SP_Insertar_Registro_Asistencia '449-160603-0104L'--*
+	exec SP_Insertar_Registro_Asistencia '449-160690-0121L'--*
+	exec SP_Insertar_Registro_Asistencia '449-160693-2301N'--*
+	exec SP_Insertar_Registro_Asistencia '449-160698-8591D'--*
+	exec SP_Insertar_Registro_Asistencia '449-270997-0105N'--*
+
+
+
+--Insertando asistencia de los clientes el dia  31/05/2022
+	exec SP_Insertar_Registro_Asistencia '001-160499-0101V'
+	exec SP_Insertar_Registro_Asistencia '001-160599-4777L'--*
+	exec SP_Insertar_Registro_Asistencia '001-160601-4005V'
+	exec SP_Insertar_Registro_Asistencia '001-160601-4701F'--*
+	exec SP_Insertar_Registro_Asistencia '001-160602-0101K'--*
+	exec SP_Insertar_Registro_Asistencia '001-160605-0101L'
+	exec SP_Insertar_Registro_Asistencia '001-160680-7494Q'--*
+	exec SP_Insertar_Registro_Asistencia '001-160685-7415Q'
+	exec SP_Insertar_Registro_Asistencia '001-160688-5881A'--*
+	exec SP_Insertar_Registro_Asistencia '001-160689-0220S'--*
+	exec SP_Insertar_Registro_Asistencia '001-160690-2000A'
+	exec SP_Insertar_Registro_Asistencia '001-160698-1000Q'--*
+	exec SP_Insertar_Registro_Asistencia '001-161098-0405L'--*
+	exec SP_Insertar_Registro_Asistencia '001-171290-0110V'--*
+	exec SP_Insertar_Registro_Asistencia '001-190699-0101O'
+	exec SP_Insertar_Registro_Asistencia '001-240990-0117K'--*
+	exec SP_Insertar_Registro_Asistencia '001-250504-7485Q'--*
+	exec SP_Insertar_Registro_Asistencia '001-270892-4584V'--*
+	exec SP_Insertar_Registro_Asistencia '001-270893-0110J'--*
+	exec SP_Insertar_Registro_Asistencia '448-160601-5247Q'--*
+	exec SP_Insertar_Registro_Asistencia '448-160686-0007W'--*
+	exec SP_Insertar_Registro_Asistencia '448-160697-0174J'--*
+	exec SP_Insertar_Registro_Asistencia '448-160698-0104J'--*
+	exec SP_Insertar_Registro_Asistencia '448-160698-4500L'--*
+	exec SP_Insertar_Registro_Asistencia '448-280620-0669L'--*
+	exec SP_Insertar_Registro_Asistencia '449-010920-0100A'--*
+	exec SP_Insertar_Registro_Asistencia '449-160601-2001S'--*
+	exec SP_Insertar_Registro_Asistencia '449-160603-0104L'--*
+	exec SP_Insertar_Registro_Asistencia '449-160690-0121L'--*
+	exec SP_Insertar_Registro_Asistencia '449-160693-2301N'--*
+	exec SP_Insertar_Registro_Asistencia '449-160698-8591D'--*
+	exec SP_Insertar_Registro_Asistencia '449-270997-0105N'--*
+

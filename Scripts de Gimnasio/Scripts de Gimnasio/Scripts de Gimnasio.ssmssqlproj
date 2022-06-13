@@ -25,12 +25,6 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Backup.sql</FullPath>
         </FileNode>
-        <FileNode Name="Consulta de Puebas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName>meza</AssociatedConnUserName>
-          <FullPath>Consulta de Puebas.sql</FullPath>
-        </FileNode>
         <FileNode Name="Creacion de tablas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -67,6 +61,12 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Insertar_Pago.sql</FullPath>
         </FileNode>
+        <FileNode Name="Laboratorio no.1 Parte 02.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Laboratorio no.1 Parte 02.sql</FullPath>
+        </FileNode>
         <FileNode Name="Operacion con Esquemas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -79,11 +79,101 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Prueba_Tabla_Temporal.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Actualizar_Categoria.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Categoria.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Actualizar_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Actualizar_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Detalle_Factura_Compra.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Detalle_Factura_Compra.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Detalle_Factura_Venta.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Detalle_Factura_Venta.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Empleado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Estado_Cliente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Estado_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Estado_Empleado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Estado_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Factura_Compra.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Factura_Compra.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Factura_Venta.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Factura_Venta.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Marca.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Marca.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Membresia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Membresia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Modo_Pago.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Modo_Pago.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Producto.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Producto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Proovedor.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Proovedor.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_R_Asistencia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_R_Asistencia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Actualizar_Suscripcion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Actualizar_Suscripcion.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Buscar_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -91,11 +181,41 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Buscar_Cliente.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Busqueda_Categoria.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Categoria.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Busqueda_Detalle_Factura_Compra.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Detalle_Factura_Compra.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Busqueda_Detalle_Factura_Venta.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Detalle_Factura_Venta.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Busqueda_Empleado.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Busqueda_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Busqueda_Estado_Cliente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Estado_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Busqueda_Estado_Empleado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Estado_Empleado.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Busqueda_Factura.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -121,6 +241,12 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Busqueda_Membresia.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Busqueda_Modo_Pago.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Modo_Pago.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Busqueda_Producto.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -133,11 +259,29 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Busqueda_Prooveedor.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Busqueda_Registro_Asistencia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Registro_Asistencia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Busqueda_Suscripcion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Busqueda_Suscripcion.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Cantidad_Clientes_Activos.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Cantidad_Clientes_Activos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Categoria.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Categoria.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Eliminar_Cliente.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -145,11 +289,65 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Eliminar_Cliente.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Eliminar_Detalle_Factura_Compra.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Detalle_Factura_Compra.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Detalle_Factura_Venta.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Detalle_Factura_Venta.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Eliminar_Empleado.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Eliminar_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Estado_Cliente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Estado_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Estado_Empleado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Estado_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Factura_Compra.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Factura_Compra.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Factura_Venta.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Factura_Venta.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Marca.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Marca.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Membresia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Membresia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Modo_Pago.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Modo_Pago.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Eliminar_Producto.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -162,6 +360,18 @@
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Eliminar_Proovedor.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Registro_Asistencia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Registro_Asistencia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Eliminar_Suscripcion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Eliminar_Suscripcion.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Insertar_Categoria.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -181,6 +391,18 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Empleado.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Insertar_Estado_Cliente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Estado_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Insertar_Estado_Empleado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Estado_Empleado.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Insertar_Factura.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -199,17 +421,23 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Marca.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Insertar_Membresia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Membresia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Insertar_Modo_Pago.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Insertar_Modo_Pago.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Insertar_Producto.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Producto.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SP_Insertar_Producto_Proveedor.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName>meza</AssociatedConnUserName>
-          <FullPath>SP_Insertar_Producto_Proveedor.sql</FullPath>
         </FileNode>
         <FileNode Name="SP_Insertar_Proveedor.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -229,17 +457,101 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Suscripcion.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1.sql">
+        <FileNode Name="SP_Mostra_Factura_Venta.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
-          <FullPath>SQLQuery1.sql</FullPath>
+          <FullPath>SP_Mostra_Factura_Venta.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Mostrar_Clientes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Mostrar_Clientes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Mostrar_Factura_Compra.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Mostrar_Factura_Compra.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Asistencia_Registradas_Hoy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Asistencia_Registradas_Hoy.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Cantidad_Clientes_por_Membresia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Cantidad_Clientes_por_Membresia.sql</FullPath>
         </FileNode>
         <FileNode Name="Vw_Clientes.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Vw_Clientes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Clientes_Activos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Clientes_Activos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Clientes_Inactivos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Clientes_Inactivos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Estado_Empleado.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Estado_Empleado.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Facturas_Compras_Realizadas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Facturas_Compras_Realizadas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Facturas_Ventas_Realizadas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Facturas_Ventas_Realizadas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Info_Clientes_Membresia_Activa.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Info_Clientes_Membresia_Activa.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Info_Empleados.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Info_Empleados.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Membresia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Membresia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Productos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Productos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Proovedores.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Proovedores.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

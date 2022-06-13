@@ -1,4 +1,3 @@
-
 alter proc SP_Busqueda_Factura_Venta
 @ID_Factura int
 as
@@ -17,4 +16,4 @@ begin
 		end
 end
 
-	exec SP_Busqueda_Factura_Venta 4
+	

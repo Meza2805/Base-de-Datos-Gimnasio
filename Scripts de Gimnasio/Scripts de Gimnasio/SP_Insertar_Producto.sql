@@ -1,5 +1,3 @@
-select * from Producto with (nolock)
-
 alter proc SP_Insertar_Producto
 @nombre nvarchar(100),
 @descp varchar(200),

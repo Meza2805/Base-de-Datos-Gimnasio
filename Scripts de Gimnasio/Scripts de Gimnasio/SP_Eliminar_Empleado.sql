@@ -14,7 +14,3 @@ as
 			end
 	end
 
-
-select * from Empleado
-exec SP_Insertar_Empleado 'josue','ramon','perez','pichardo','87213410','Villa Libertad de la chelita 4 cuadras al norte','12/02/2021'
-exec SP_Eliminar_Empleado 3

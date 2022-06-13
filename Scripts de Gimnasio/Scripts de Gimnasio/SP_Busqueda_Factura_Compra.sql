@@ -16,6 +16,3 @@ alter proc SP_Busqueda_Factura_Compra
 			where ID_Factura = @ID_Factura
 		END
 	end
-
-SP_Busqueda_Factura_Compra 4
-select * from Factura_Compra

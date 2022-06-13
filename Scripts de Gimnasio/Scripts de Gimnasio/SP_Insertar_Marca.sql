@@ -1,7 +1,3 @@
-
- ALTER table Marca
- DROP column  Descripcion
-
  alter proc SP_Insertar_Marca
  @nombre varchar(40)
  as
@@ -9,9 +5,13 @@
 	begin
 	if not exists (select top 1 Nombre from Marca where Nombre = @nombre)
 		begin
-		insert into Marca (Nombre)
-		values (LTRIM(RTRIM(UPPER(@nombre))))
-		print 'MARCA REGISTRADA'
+			insert into Marca (Nombre)
+			values (LTRIM(RTRIM(UPPER(@nombre))))
+			print 'MARCA REGISTRADA'
+		end
+	else
+		begin
+			print 'MARCA YA SE ENCUENTRA REGISTRADA'
 		end
 	end
 ---------------------------------------------------------------

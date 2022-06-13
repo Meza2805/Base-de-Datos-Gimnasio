@@ -59,6 +59,26 @@ as
 		print 'FACTURA REGISTRADA CORRECTAMENTE'
 	end
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 select * from Producto
@@ -89,7 +109,127 @@ select P.ID_Producto, P.Nombre,PP.ID_Proveedor, PP.Nombre as PROOVEDOR from Prod
 		on DFC.ID_Factura_Compra =  FC.ID_Factura INNER JOIN Proveedor PP 
 		ON FC.ID_Proveedor =  PP.ID_Proveedor group by P.ID_Producto, P.Nombre,PP.ID_Proveedor, PP.Nombre
 
+select * from Factura_Compra
+select * from Empleado
+select * from Modo_Pago
+select * from Proveedor
+select * from Producto 
+select * from Detalle_Factura_Compra
 
-47,49,49
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',4,3
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 6,50,32,25
+exec SP_Insertar_Detalle_Factura_Compra 6,51,20,25
+exec SP_Insertar_Detalle_Factura_Compra 6,52,25,15
+exec SP_Insertar_Detalle_Factura_Compra 6,54,26,25
 
-update Producto set Precio = 0, Stock = 0 where ID_Producto <> 47 and ID_Producto <> 48 and ID_Producto <> 49
+--Total
+exec SP_Insertar_Factura_Compra_02 6
+
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',2,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 5,47,32,25
+exec SP_Insertar_Detalle_Factura_Compra 5,48,20,25
+exec SP_Insertar_Detalle_Factura_Compra 5,49,25,15
+exec SP_Insertar_Detalle_Factura_Compra 5,50,26,25
+exec SP_Insertar_Detalle_Factura_Compra 5,48,20,25
+--Total
+exec SP_Insertar_Factura_Compra_02 5
+
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',3,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 7,53,25,10
+--Total
+exec SP_Insertar_Factura_Compra_02 7
+
+
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',4,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 8,77,15,18
+--Total
+exec SP_Insertar_Factura_Compra_02 8
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-180491-8974S',4,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 9,55,10,18
+exec SP_Insertar_Detalle_Factura_Compra 9,56,15,10
+exec SP_Insertar_Detalle_Factura_Compra 9,57,15,10
+exec SP_Insertar_Detalle_Factura_Compra 9,58,10,10
+exec SP_Insertar_Detalle_Factura_Compra 9,59,15,5
+exec SP_Insertar_Detalle_Factura_Compra 9,60,10,10
+exec SP_Insertar_Detalle_Factura_Compra 9,61,12,10
+exec SP_Insertar_Detalle_Factura_Compra 9,62,15,10
+--Total
+exec SP_Insertar_Factura_Compra_02 9
+
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',4,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 8,77,15,18
+--Total
+exec SP_Insertar_Factura_Compra_02 8
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-180491-8974S',4,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 10,63,10,18
+exec SP_Insertar_Detalle_Factura_Compra 10,64,10,10
+exec SP_Insertar_Detalle_Factura_Compra 10,65,10,10
+exec SP_Insertar_Detalle_Factura_Compra 10,66,10,6
+exec SP_Insertar_Detalle_Factura_Compra 10,67,10,5
+exec SP_Insertar_Detalle_Factura_Compra 10,68,10,10
+exec SP_Insertar_Detalle_Factura_Compra 10,69,12,8
+exec SP_Insertar_Detalle_Factura_Compra 10,70,15,10
+exec SP_Insertar_Detalle_Factura_Compra 10,71,15,4
+exec SP_Insertar_Detalle_Factura_Compra 10,72,15,10
+exec SP_Insertar_Detalle_Factura_Compra 10,73,10,3
+exec SP_Insertar_Detalle_Factura_Compra 10,74,15,9
+
+--Total
+exec SP_Insertar_Factura_Compra_02 10
+
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',4,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 11,75,15,6
+exec SP_Insertar_Detalle_Factura_Compra 11,76,15,6
+--Total
+exec SP_Insertar_Factura_Compra_02 11
+
+--Insertando datos de facturacion de compra de productos
+--Datos Generales
+exec SP_Insertar_Factura_Compra_01 '001-150497-0074S',1002,1
+--Detalle de Facturacion
+exec SP_Insertar_Detalle_Factura_Compra 14,83,0.5,12
+exec SP_Insertar_Detalle_Factura_Compra 14,84,0.5,12
+exec SP_Insertar_Detalle_Factura_Compra 14,85,0.5,12
+exec SP_Insertar_Detalle_Factura_Compra 14,86,0.5,12
+exec SP_Insertar_Detalle_Factura_Compra 14,87,0.5,12
+exec SP_Insertar_Detalle_Factura_Compra 14,88,0.5,12
+
+
+
+--Total
+exec SP_Insertar_Factura_Compra_02 14
+
+
+select * from Proveedor
+select * from Producto 
