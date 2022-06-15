@@ -1,0 +1,3 @@
+create view Vw_Detalle_Factura_Venta_Tabla
+as
+select ID_Detalle,ID_Factura,ID_Producto,Cant_Producto from Detalle_Factura_Venta

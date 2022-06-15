@@ -457,6 +457,12 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Insertar_Suscripcion.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Login.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SP_Login.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Mostra_Factura_Venta.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
@@ -474,12 +480,6 @@
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Mostrar_Factura_Compra.sql</FullPath>
-        </FileNode>
-        <FileNode Name="Vw_Asistencia_Registradas_Hoy.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName>meza</AssociatedConnUserName>
-          <FullPath>Vw_Asistencia_Registradas_Hoy.sql</FullPath>
         </FileNode>
         <FileNode Name="Vw_Cantidad_Clientes_por_Membresia.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -499,11 +499,77 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Vw_Clientes_Activos.sql</FullPath>
         </FileNode>
+        <FileNode Name="Vw_Clientes_Edades.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Clientes_Edades.sql</FullPath>
+        </FileNode>
         <FileNode Name="Vw_Clientes_Inactivos.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Vw_Clientes_Inactivos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Compra_Detalle.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Compra_Detalle.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Compra_Ganancia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Compra_Ganancia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Compra_SubTotal.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Compra_SubTotal.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Compra_Tabla.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Compra_Tabla.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Venta_Detalle.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Venta_Detalle.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Venta_Detalle_Total.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Venta_Detalle_Total.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Detalle_Factura_Venta_Tabla.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Detalle_Factura_Venta_Tabla.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Empleado_Datos_Basicos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Empleado_Datos_Basicos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Empleado_Usuario.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Empleado_Usuario.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Empleados_Fecha_Contratacion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Empleados_Fecha_Contratacion.sql</FullPath>
         </FileNode>
         <FileNode Name="Vw_Estado_Empleado.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -529,17 +595,29 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Vw_Info_Clientes_Membresia_Activa.sql</FullPath>
         </FileNode>
-        <FileNode Name="Vw_Info_Empleados.sql">
+        <FileNode Name="Vw_Marca_Tabla.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
-          <FullPath>Vw_Info_Empleados.sql</FullPath>
+          <FullPath>Vw_Marca_Tabla.sql</FullPath>
         </FileNode>
         <FileNode Name="Vw_Membresia.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Vw_Membresia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Modo_Pago_Tabla.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Modo_Pago_Tabla.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Mostrar_Clientes_Ordenados.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Mostrar_Clientes_Ordenados.sql</FullPath>
         </FileNode>
         <FileNode Name="Vw_Productos.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
@@ -552,6 +630,18 @@
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Vw_Proovedores.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Registro_Asistencia_Detallado_Todos_Clientes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Registro_Asistencia_Detallado_Todos_Clientes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Vw_Registro_Asistencia_Hoy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>Vw_Registro_Asistencia_Hoy.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

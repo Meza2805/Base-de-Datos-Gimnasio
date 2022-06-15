@@ -5,7 +5,7 @@ SELECT ID_Estado, Descripcion, Observacion FROM Estado_Cliente
 --TABLA CLIENTE (TABLA FUERTE) //////////////////////////////////////////////////
 SELECT Cedula, [Primer Nombre], [Segundo Nombre], [Primer Apellido], 
 [Segundo Apellido], Sexo, Fecha_Nac, Fecha_Registro, ID_Estado FROM Cliente
-
+select * from Wv_Info_Empleados
 
  --CONSULTA 01 (RETORNA LA LISTA DE CLIENTES ORDENADOS POR FECHA DE REGISTRO EN ORDEN ASCENDENTE)
  SELECT Cedula, [Primer Nombre], [Segundo Nombre], [Primer Apellido], [Segundo Apellido] ,
@@ -233,3 +233,5 @@ SELECT SubTotal, IVA, TOTAL FROM Factura_Compra WHERE ID_Factura = 4
 
   --TABLA PROOVEDOR (TABLA FUERTE) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   SELECT ID_Proveedor AS [ID PROOVEDOR],Nombre AS NOMBRE,Telefono AS TELEFONO,Direccion AS DIRECCION FROM Proveedor
+
+  select * from Vw_Membresia
