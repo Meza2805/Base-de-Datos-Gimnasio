@@ -277,6 +277,72 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>SP_Cantidad_Clientes_Activos.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_Cursor_Cliente_Activos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Cliente_Activos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Cliente_Datos_Personales_Ordenados_Edad.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Cliente_Datos_Personales_Ordenados_Edad.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Cliente_Estado_Tabla.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Cliente_Estado_Tabla.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Cliente_Tabla.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Cliente_Tabla.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Empleado_Usuario.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Empleado_Usuario.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Estado_Cliente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Estado_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Producto_Fecha.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SP_Cursor_Producto_Fecha.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Registro_Asistencia.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Registro_Asistencia.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Suscripcion_Ord_Fecha.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Suscripcion_Ord_Fecha.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Suscripcion_Tabla.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Suscripcion_Tabla.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_Cursor_Suscripcion_Vencidas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName>meza</AssociatedConnUserName>
+          <FullPath>SP_Cursor_Suscripcion_Vencidas.sql</FullPath>
+        </FileNode>
         <FileNode Name="SP_Eliminar_Categoria.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>

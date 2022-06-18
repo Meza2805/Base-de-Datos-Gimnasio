@@ -1,3 +1,0 @@
-create view Vw_Suscripcion_Tabla
-as
-select ID_SUBS,Fecha_Contratacion, Fecha_Expiracion,ID_Cliente,ID_Empleado,ID_Membresia,Finalizada from suscripcion

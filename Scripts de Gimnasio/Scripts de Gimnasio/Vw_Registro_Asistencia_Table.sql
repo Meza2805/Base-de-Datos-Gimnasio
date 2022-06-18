@@ -1,3 +1,0 @@
-create view Vw_Registro_Asistencia_Table
-as
-select ID_Registro,Fecha,Hora,ID_Cliente from Registo_Asistencia

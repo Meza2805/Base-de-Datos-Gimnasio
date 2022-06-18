@@ -1,0 +1,25 @@
+ CREATE PROC SP_MOSTRAR_FACTURA_COMPRA
+@ID_FACTURA INT
+AS BEGIN
+	IF NOT EXISTS (SELECT TOP 1 ID_Factura FROM Factura_Compra WHERE ID_Factura = @ID_FACTURA)
+	BEGIN
+		PRINT 'LA FACTURA NO EXISTE EN LA BASE DE DATOS'
+	END
+	ELSE
+	BEGIN
+		SELECT ID_Factura,ID_Empleado AS CEDULA, (E.[Primer Nombre]+' '+[Primer Apellido]) AS EMPLEADO, FC.Fecha AS FECHA, MP.Descripcion AS [MODO DE PAGO] from Factura_Compra FC
+	INNER JOIN Empleado E ON FC.ID_Empleado = E.Cedula
+	INNER JOIN Modo_Pago MP ON FC.ID_MPago = MP.ID_MPago WHERE ID_Factura = @ID_FACTURA
+
+
+
+	SELECT P.Nombre AS PRODUCTO, DFC.Cant_Producto AS CANTIDAD, (DFC.Cant_Producto * DFC.Costo) AS TOTAL FROM Detalle_Factura_Compra DFC 
+	INNER JOIN Producto P ON DFC.ID_Producto = P.ID_Producto WHERE ID_Factura_Compra = @ID_FACTURA
+
+
+	SELECT SubTotal, IVA, TOTAL FROM Factura_Compra WHERE ID_Factura = @ID_FACTURA
+	END
+END
+
+
+EXEC SP_MOSTRAR_FACTURA_COMPRA 6

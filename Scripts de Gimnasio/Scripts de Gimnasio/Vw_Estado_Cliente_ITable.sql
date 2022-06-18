@@ -1,3 +1,0 @@
-create view Vw_Estado_Cliente_ITable
-as
-select ID_Estado, Descripcion,Observacion from Estado_Cliente
