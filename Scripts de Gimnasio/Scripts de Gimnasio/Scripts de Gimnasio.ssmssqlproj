@@ -31,6 +31,18 @@
           <AssociatedConnUserName>meza</AssociatedConnUserName>
           <FullPath>Creacion de tablas.sql</FullPath>
         </FileNode>
+        <FileNode Name="FCN_Registro_Asistencia_Cliente.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>FCN_Registro_Asistencia_Cliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="FCN_Registro_Asistencia_Fecha.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>FCN_Registro_Asistencia_Fecha.sql</FullPath>
+        </FileNode>
         <FileNode Name="Funcion_Convertir_Fechar.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MEZA-PC:False:meza</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MEZA-PC</AssociatedConnSrvName>
