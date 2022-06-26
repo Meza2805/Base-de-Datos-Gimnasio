@@ -1,0 +1,14 @@
+ALTER TRIGGER TG_Actualizacion_Empleado 
+   ON  Empleado
+   AFTER INSERT
+AS 
+BEGIN
+	SET NOCOUNT ON;
+    INSERT INTO Registro(ID_TABLA)
+    SELECT Cedula FROM INSERTED
+
+	update Registro set TABLA = 'EMPLEADO' ,FECHA = GETDATE(), ACCION= 'ACTUALIZACION' where ID_REGISTRO = @@IDENTITY
+END
+GO
+
+

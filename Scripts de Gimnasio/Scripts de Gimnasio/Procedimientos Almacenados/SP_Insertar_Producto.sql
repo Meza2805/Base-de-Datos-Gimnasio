@@ -141,8 +141,9 @@ exec SP_Insertar_Producto 'camisa fitness',20,'',12,4,
 exec SP_Insertar_Producto 'mallas fitnes',30,'',12,4,
 'malla fitness para mujer',1
 
-exec SP_Insertar_Producto 'sudadera para hombre',40,'',0,4,
-'sudadera para hombre talla l',8
+exec SP_Insertar_Producto 'sudadera para mujer','sudadera para hombre talla l',4,1
+select * from Categoria
+select * from Marca
 
 exec SP_Insertar_Producto 'camisera de tirantes',20,'',17,4,
 'camisera forza de tirantes',5

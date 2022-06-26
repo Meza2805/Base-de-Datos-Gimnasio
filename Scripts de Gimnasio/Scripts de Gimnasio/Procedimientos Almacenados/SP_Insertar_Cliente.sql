@@ -110,3 +110,9 @@ EXEC SP_Insertar_Cliente 'isabel','','perez','velasquez','f','27/08/1992'
 
 EXEC SP_Insertar_Cliente 'adolfo','yamil','hernandez','lopez','m','27/08/1993'
 EXEC SP_Insertar_Cliente 'eduardo','francisco','romero','venancio','m','24/09/1990'
+
+
+select * from Cliente order by Fecha_Registro desc
+select * from Registro_Insercion
+
+EXEC SP_Insertar_Cliente '001-010596-0001Q','francisco','fernando','martinez','solis','m','01/05/1996',0

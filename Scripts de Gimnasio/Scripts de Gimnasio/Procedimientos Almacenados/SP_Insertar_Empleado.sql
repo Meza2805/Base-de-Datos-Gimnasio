@@ -38,5 +38,10 @@ ALTER proc SP_Insertar_Empleado
 	exec SP_Insertar_Empleado 'jose','ramon','perez','pichardo','87213410','Villa Libertad de la chelita 4 cuadras al norte','12/02/2021'
 	exec SP_Insertar_Empleado 'Adrian','jose','medina','jerez','89021234','Sabana grande, urbanizacion rios de agua viva casa no.234','04/04/2021'
 
+	exec SP_Insertar_Empleado '001-120998-0012S','CARMEN','ELVIRA','PINEDA','ARVIZU','85749632','TIPITAPA','15/04/2021'
+
+
+	SELECT * FROM Registro_Insercion
+
 
 	

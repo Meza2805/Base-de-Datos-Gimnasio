@@ -193,7 +193,7 @@ exec SP_Insertar_Suscripcion '001-270892-4584V','001-180491-8974S','S'
 exec SP_Insertar_Suscripcion '001-270893-0110J','001-180491-8974S','S'
 exec SP_Insertar_Suscripcion '448-100490-0012X','001-180491-8974S','S'
 exec SP_Insertar_Suscripcion '448-160686-0007W','001-180491-8974S','Q'
-exec SP_Insertar_Suscripcion '448-160697-0174J','001-180491-8974S','Q'
+exec SP_Insertar_Suscripcion '001-010596-0001Q','001-180491-8974S','Q'
 
 
 
@@ -204,7 +204,7 @@ select * from suscripcion order by Fecha_Contratacion
 select * from Empleado
 select * from Registo_Asistencia
 
-exec SP_Insertar_Suscripcion '001-160499-0101V','001-180491-8974S','Q'
+
 
 exec SP_Insertar_Suscripcion '001-160685-7415Q','001-180491-8974S','M'
 exec SP_Insertar_Suscripcion '001-190699-0101O','001-180491-8974S','M'
@@ -212,4 +212,8 @@ exec SP_Insertar_Suscripcion '449-160603-0104L','001-180491-8974S','M'
 exec SP_Insertar_Suscripcion '449-270997-0105N','001-180491-8974S','Q'
 exec SP_Insertar_Suscripcion '449-160693-2301N','001-180491-8974S','Q'
 
-SELECT * from Vw_Clientes_Activos
+exec SP_Insertar_Suscripcion '001-010596-0001A','001-180491-8974S','Q',0,''
+
+SELECT * from Registo_Asistencia
+SELECT * FROM Cliente
+select * from Registro_Insercion
