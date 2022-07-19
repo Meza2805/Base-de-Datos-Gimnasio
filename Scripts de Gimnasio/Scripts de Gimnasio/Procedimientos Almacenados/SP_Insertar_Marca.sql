@@ -1,17 +1,19 @@
  alter proc SP_Insertar_Marca
- @nombre varchar(40)
+ @nombre varchar(40),
+ @id_categoria int,
+ @salida varchar(50) out
  as
  set nocount on
 	begin
 	if not exists (select top 1 Nombre from Marca where Nombre = @nombre)
 		begin
-			insert into Marca (Nombre)
-			values (LTRIM(RTRIM(UPPER(@nombre))))
-			print 'MARCA REGISTRADA'
+			insert into Marca (Nombre,ID_Categoria)
+			values (LTRIM(RTRIM(UPPER(@nombre))),@id_categoria)
+			set @salida =  'MARCA REGISTRADA'
 		end
 	else
 		begin
-			print 'MARCA YA SE ENCUENTRA REGISTRADA'
+			set @salida = 'MARCA YA SE ENCUENTRA REGISTRADA'
 		end
 	end
 ---------------------------------------------------------------
@@ -20,7 +22,7 @@
 
 
 
- select Marca from Producto group by Marca
+
  select * from Marca
  SP_Help Marca
 

@@ -1,42 +1,67 @@
 --primera parte para inserta Factura de Compra de Productos
 sp_help Factura_Compra
+select * from Empleado
+select * from Proveedor
+select * from Modo_Pago
+exec SP_Insertar_Factura_Compra_01 '001-120998-0012S','COCA-COLA FEMSA','EFECTIVO',0
+
 alter proc SP_Insertar_Factura_Compra_01
 @Cedula_Empleado char(16),
-@id_proveedor int,
-@id_Mpago int
+@proveedor varchar(35),
+@Mpago varchar(35),
+@id_factura int out
 as
 begin
+
+declare @id_proveedor int 
+declare @id_Mpago int
+set @id_proveedor = (select ID_Proveedor from Proveedor where Nombre = @proveedor)
+set @id_Mpago = (select ID_MPago from Modo_Pago  where Descripcion =  @Mpago )
+
 set nocount on
 	insert into Factura_Compra(Fecha,ID_Empleado,ID_Proveedor,ID_MPago)
 		values (GETDATE(),@Cedula_Empleado,@id_proveedor,@id_Mpago)
-		print 'DATOS GENERALES DE FACTURA DE COMPRA DE PRODCUTOS INSERTADOS'
+		set @id_factura = @@IDENTITY
+		select @id_factura
 end
 ------------------------------------------------------------------------
 --------Fin de Procedimiento Almacenado---------------
 
 select * from Factura_Compra with (nolock)
+select * from Empleado
+select * from Proveedor
+select * from Modo_Pago
+select * from Factura_Compra 
+select * from Producto
 
+
+SP_Insertar_Detalle_Factura_Compra 17,47,1000,2
+SP_Insertar_Detalle_Factura_Compra 17,48,1500,3
 --segunda parte para insertar factura (detalle factura)
 alter proc SP_Insertar_Detalle_Factura_Compra
 @id_factura int,
 @id_producto int,
 @Costo money,
-@cantidad_producto int
+@cantidad_producto int,
+@salida varchar(50) out
 as
 begin
 	set nocount on
 		insert into Detalle_Factura_Compra(ID_Factura_Compra,ID_Producto,Costo,Cant_Producto)
 		values (@id_factura,@id_producto,@Costo,@cantidad_producto)
-		print 'DETALLE REGISTRADO CORRECTAMENTE'
+		set @salida = 'DETALLE REGISTRADO CORRECTAMENTE'
 		update Producto set Stock = Stock + @cantidad_producto,
 							Precio = (@Costo * 0.30) + @Costo
 				where ID_Producto = @id_producto
+		select @salida
 end
 ------------------------------------------------------------------------------------------
 
 --SEGUNDA PARTE PARA INGRESAR LA FACTURA DE COMPRA
-alter SP_Insertar_Factura_Compra_02
-@id_factura int
+exec SP_Insertar_Factura_Compra_02 17
+alter proc SP_Insertar_Factura_Compra_02
+@id_factura int,
+@salida varchar(50) out
 as
 	begin
 		--declaracion de variables locales
@@ -44,10 +69,11 @@ as
 		declare @iva money
 		declare @total money
 		set nocount on
+
 		--uso de variable tipo tabla para calcular el precio y el total
 		declare @detalle table (id int identity (1,1), codigo_producto int,cantidad int,costo money,total money)
 		insert into @detalle (codigo_producto,cantidad,costo,total)
-		select ID_Producto,Cant_Producto,costo,(Costo *  Cant_Producto) FROM Detalle_Factura_Compra 
+		select ID_Producto,Cant_Producto,costo,(Costo *  Cant_Producto) FROM Detalle_Factura_Compra where ID_Factura_Compra =@id_factura
 
 		--Insertando valores en la tabla factura
 		set @subtotal =  (select sum(total) from @detalle)
@@ -56,7 +82,8 @@ as
 			
 		update Factura_Compra set SubTotal = @subtotal, IVA = @iva , Total = @total 
 			where ID_Factura  = @id_factura
-		print 'FACTURA REGISTRADA CORRECTAMENTE'
+	set @salida = 'FACTURA REGISTRADA CORRECTAMENTE'
+	select @salida
 	end
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -64,7 +91,12 @@ as
 
 
 
+select * from Factura_Compra
+select * from Detalle_Factura_Compra
 
+
+delete from Factura_Compra
+select *from Detalle_Factura_Compra
 
 
 

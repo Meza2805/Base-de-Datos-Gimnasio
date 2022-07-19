@@ -20,7 +20,8 @@ begin
 			if (@id_membresia = 'D') --Derecho a Ejercicio por 1 dia
 				begin
 					insert into suscripcion (Fecha_Contratacion,Fecha_Expiracion,ID_Cliente,ID_Empleado,ID_Membresia,Finalizada)
-						values (getdate(),GETDATE(),@id_cliente,@id_empleado,@id_membresia,1)
+						values (getdate(),GETDATE(),@id_cliente,@id_empleado,@id_membresia,@finalizada)
+						set @bandera =1
 				end
 			if (@id_membresia = 'M') --Membresia de 30 dias
 				begin
@@ -63,6 +64,9 @@ begin
 	select @salida,@fecha_convertida
 end
 ---------------------------------------------------------------------
+
+
+
 select *  from suscripcion
 select * from cliente where ID_Cliente  = 2
 select * from Empleado 
@@ -72,10 +76,13 @@ select * from Registo_Asistencia
    SELECT ID_Cliente AS [CEDULA CLINETE],C.[Primer Nombre] AS NOMBRE,C.[Primer Apellido] AS 
    APELLIDO,Fecha_Contratacion AS [FECHA DE CONTRATACION], Fecha_Expiracion AS [FECHA DE EXPIRACION],M.Descripcion AS
    [TIPO DE MEMBRESIA] FROM suscripcion S INNER JOIN Cliente C
-   ON S.ID_Cliente = C.Cedula INNER JOIN Membresia M ON S.ID_Membresia = M.ID_Membresia WHERE S.Finalizada=0
+   ON S.ID_Cliente = C.Cedula INNER JOIN Membresia M ON S.ID_Membresia = M.ID_Membresia WHERE S.Finalizada=0 ORDER BY [FECHA DE CONTRATACION] DESC
 
 
-exec SP_Insertar_Suscripcion '445-270997-0105N','448-200590-0074X','M',0,''
+exec SP_Insertar_Suscripcion '448-160601-5247Q','448-200590-0074X','M',0,''
+
+SELECT Fecha_Contratacion, Fecha_Expiracion, ID_Cliente,[Primer Nombre] FROM suscripcion
+INNER JOIN Cliente ON suscripcioN.ID_Cliente = Cliente.Cedula ORDER BY Fecha_Contratacion DESC
 
 select GETDATE()
 Select CONVERT(varchar,GETDATE(),101) as [DD/MM/YYYY]

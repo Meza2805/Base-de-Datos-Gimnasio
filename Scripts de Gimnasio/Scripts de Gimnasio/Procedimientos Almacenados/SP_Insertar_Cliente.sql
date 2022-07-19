@@ -59,60 +59,8 @@ sp_help suscripcion
 Select * from Empleado
 sp_help Empleado
 
+sp_help Cliente
+select * from Cliente order by Fecha_Registro  desc
+select * from Cliente order by  [Primer Nombre] 
 
-
-
-
-
---Insertando valores a la tabla cliente
-
-EXEC SP_Insertar_Cliente 'Carmen','elvirA','pineda','arvizu','f','16/06/1980','01/03/2021'
-EXEC SP_Insertar_Cliente 'Xiomara','TAtiana','perez','pereira','f','16/06/1995','14/04/2021'
-EXEC SP_Insertar_Cliente 'Adrian','josue','rivera','ruiz','m','16/06/1993','14/02/2021'
-EXEC SP_Insertar_Cliente 'Carlos','marco','ramirez','martinez','m','16/06/1999','4/02/2021'
-EXEC SP_Insertar_Cliente 'Jose','ramon','pichardo','perez','m','16/06/2001','25/07/2021'
-EXEC SP_Insertar_Cliente 'reyna','isabel','velasquez','moreno','f','17/12/1990','10/08/2021'
-EXEC SP_Insertar_Cliente 'meyling','estefania','mejia','urroz','f','16/06/2001','18/05/2021'
-EXEC SP_Insertar_Cliente 'Cristopher','emilio','saenz','flores','m','16/06/1998','10/11/2021'
-EXEC SP_Insertar_Cliente 'jose','mercedes','bustillo','valerio','m','25/05/2004','15/05/2021'
-EXEC SP_Insertar_Cliente 'ingrid ','maria','ruiz','pineda','f','16/04/1999','14/04/2021'
-EXEC SP_Insertar_Cliente 'flor','de maria','pineda','arvizu','f','16/06/1989','10/12/2021'
-EXEC SP_Insertar_Cliente 'carmen','elvira','portobanco','marenco','f','16/06/1985','14/01/2021'
-EXEC SP_Insertar_Cliente 'ronald','josue','soza','zamora','m','01/09/2000','27/02/2021'
-EXEC SP_Insertar_Cliente 'sebastian','jose','meza','orozco','m','16/06/2001','15/09/2021'
-EXEC SP_Insertar_Cliente 'abisai','mercedes','velasquez','vasquez','f','16/06/1995','28/03/2021'
-EXEC SP_Insertar_Cliente 'martha','lorena','arvizu','picado','f','16/06/1998','25/06/2021'
-EXEC SP_Insertar_Cliente 'pablo','josue','arvizu','picado','m','16/06/1990','25/06/2021'
-EXEC SP_Insertar_Cliente 'rene','','arvizu','picado','m','16/06/1998','25/06/2021'
-EXEC SP_Insertar_Cliente 'uriel','','arauz','treminio','m','16/06/2001','27/12/2021'
-EXEC SP_Insertar_Cliente 'luis','manuel','genet','gomez','m','16/06/2005','25/10/2021'
-EXEC SP_Insertar_Cliente 'maria','lourdes','silva','guido','f','16/10/1998','26/08/2021'
-EXEC SP_Insertar_Cliente 'dina','sarai','castro','flores','f','19/06/1999','30/06/2021'
-EXEC SP_Insertar_Cliente 'marlon','alcides','gonzalez','lopez','m','16/06/2003','25/11/2021'
-EXEC SP_Insertar_Cliente 'jose','manuel','aleman','rizo','m','27/09/1997','30/11/2021'
-EXEC SP_Insertar_Cliente 'daniel','','saavedra','melendez','m','28/06/2000','25/03/2021'
-EXEC SP_Insertar_Cliente 'ramiro','ruben','martinez','martinez','m','16/06/1998','25/06/2021'
-
-
---Insertando valores a la tabla cliente 09/04/2022
-
-EXEC SP_Insertar_Cliente 'raul','','morales','matuz','m','16/06/1998'
-EXEC SP_Insertar_Cliente 'reyna','isabel','velasquez','venancio','f','16/05/1999'
-EXEC SP_Insertar_Cliente 'francisco','george','lopez','lopez','m','16/06/2002'
-EXEC SP_Insertar_Cliente 'melvin','uriel','urbina','lara','m','16/06/1990'
-
-select * from Cliente
-
---Insertando valores a la tabla cliente 12/04/2022
-
-EXEC SP_Insertar_Cliente 'meyling','estefania','perez','velasquez','f','16/06/1997'
-EXEC SP_Insertar_Cliente 'isabel','','perez','velasquez','f','27/08/1992'
-
-EXEC SP_Insertar_Cliente 'adolfo','yamil','hernandez','lopez','m','27/08/1993'
-EXEC SP_Insertar_Cliente 'eduardo','francisco','romero','venancio','m','24/09/1990'
-
-
-select * from Cliente order by Fecha_Registro desc
-select * from Registro_Insercion
-
-EXEC SP_Insertar_Cliente '001-010596-0001Q','francisco','fernando','martinez','solis','m','01/05/1996',0
+EXEC SP_Insertar_Cliente '442-010520-0001Q','camilo','esau','castro','flores','m','01/05/2000',0

@@ -1,31 +1,34 @@
-ALTER proc SP_Insertar_Proveedor 
-@Nombre nvarchar (100),
-@Telefono char(8),
-@Direccion nvarchar (300)
+alter proc SP_Insertar_Proveedor02
+@Nombre varchar (100),
+@Telefono varchar(8),
+@Direccion varchar (300),
+@salida varchar(50) out
 as
 begin
 set nocount on
 	if not exists (select Nombre from Proveedor with (nolock)where Nombre = @Nombre)
 	begin
-			insert into Proveedor (Nombre,Telefono,Direccion)
+			insert into dbo.Proveedor (Nombre,Telefono,Direccion)
 		values (LTRIM(RTRIM(UPPER(@Nombre))),LTRIM(RTRIM(UPPER(@Telefono))),LTRIM(RTRIM(UPPER(@Direccion))))
-		print 'PROVEEDOR REGISTRADO'
+		set @salida = 'PROVEEDOR REGISTRADO'
 	end
 	else
 	begin
-		print 'EL PRODUCOT YA EXISTE EN LA BASE DE DATOS'
+		set @salida = 'EL PRODUCTO YA EXISTE EN LA BASE DE DATOS'
 	end
+	select @salida
 end
 
 ----------------------------------------------------------------------
-
+select * from Proveedor
 
 
 select * from Proveedor
+insert into Proveedor (Nombre,Telefono,Direccion) values ('prueba','75201801','managua')
 sp_help Proveedor
 
 
-
+EXEC SP_Insertar_Proveedor02 'ASDA','DASSD','SDASDASDA','' 
 
 
 

@@ -1,6 +1,6 @@
 ALTER TRIGGER TG_Actualizacion_Suscripcion
    ON  suscripcion
-   AFTER INSERT
+   AFTER update
 AS 
 BEGIN
 	SET NOCOUNT ON;

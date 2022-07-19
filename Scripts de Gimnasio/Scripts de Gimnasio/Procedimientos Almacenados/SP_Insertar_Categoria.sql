@@ -1,14 +1,17 @@
-create proc SP_Insertar_Categoria
-@id int,
-@descripcion varchar(50)
+ALTER proc SP_Insertar_Categoria
+@descripcion varchar(50),
+@salida varchar(50) out
 as
 	begin
-		if not exists (select ID_Categoria from Categoria where ID_Categoria = @id)
+		if not exists (select Descripcion from Categoria where Descripcion = @descripcion)
 			begin
-				insert into Categoria (ID_Categoria,Descripcion) values (@id,@descripcion)
+				insert into Categoria (Descripcion) values (@descripcion)
+				set @salida =  'CATEGORIA INSERTADA'
 			end
 		else
 			begin
-				print 'EL ESTADO YA SE ENCUENTRA EN LA BASE DE DATOS'
+				set @salida= 'LA CATEGORIA YA ENCUENTRA EN LA BASE DE DATOS'
 			end
 	end
+
+

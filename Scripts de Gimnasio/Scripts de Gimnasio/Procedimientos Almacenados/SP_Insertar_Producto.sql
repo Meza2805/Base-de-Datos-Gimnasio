@@ -1,26 +1,36 @@
+
+exec SP_Insertar_Producto 'mirinda uva 500ml',3,12,''
+
+select * from Producto
+
 alter proc SP_Insertar_Producto
 @nombre nvarchar(100),
-@descp varchar(200),
-@id_categoria int,
-@id_marca int
-as
+@categoria varchar(35),
+@marca varchar(35),
+@salida varchar(100) out
+aS
 	begin
+	declare @id_categoria int
+	declare @id_marca int
+	set @id_categoria = (select ID_Categoria from Categoria where Descripcion = @categoria)
+	set @id_marca = (select ID_Marca from Marca where Nombre = @marca)
 	declare @precio money
 	declare @stock int
 	set @precio = 0
 	set @stock = 0
 	set nocount on
 	--La siguiente condicion verifica si no existe un producto con el misno nombre, descripcion y marca en la tabla
-	if not exists (select top 1 Nombre from Producto with (nolock) where Nombre = @nombre and ID_Marca = @id_marca and Descripcion_Producto=@descp)
+	if not exists (select top 1 Nombre from Producto with (nolock) where Nombre = @nombre and ID_Marca = @id_marca)
 		begin
-			insert into Producto (Nombre,Precio,Stock,Descripcion_Producto,ID_Categoria,ID_Marca)
-			values (ltrim(rtrim(upper(@nombre))),@precio,@stock,ltrim(rtrim(upper(@descp))),@id_categoria,LTRIM(rtrim(upper(@id_marca))))
-			PRINT 'PRODUCTO REGISTRADO'
+			insert into Producto (Nombre,Precio,Stock,ID_Marca,ID_Categoria)
+			values (ltrim(rtrim(upper(@nombre))),@precio,@stock,@id_marca,@id_categoria)
+			set @salida =  'PRODUCTO REGISTRADO'
 		end
 	else
 		begin
-			print 'EL PRODUCTO YA EXISTE'
+			set @salida = 'EL PRODUCTO YA EXISTE'
 		end
+		select @salida
 	end
 
 -----------------------------------------------------------------------------------------
@@ -31,7 +41,7 @@ select * from Detalle_Factura_Venta
 
 select * from Categoria
 select * from Producto
-SP_Help Producto
+
 
 
 select * from Producto

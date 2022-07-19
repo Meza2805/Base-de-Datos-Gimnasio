@@ -1,6 +1,6 @@
 ALTER TRIGGER TG_Actualizacion_Productos 
    ON  Producto
-   AFTER INSERT
+   AFTER update
 AS 
 BEGIN
 	SET NOCOUNT ON;

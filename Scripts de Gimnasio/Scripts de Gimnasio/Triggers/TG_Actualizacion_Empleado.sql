@@ -1,6 +1,6 @@
 ALTER TRIGGER TG_Actualizacion_Empleado 
    ON  Empleado
-   AFTER INSERT
+   AFTER update
 AS 
 BEGIN
 	SET NOCOUNT ON;

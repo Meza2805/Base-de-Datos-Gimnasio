@@ -1,23 +1,40 @@
 --primera parte para inserta Factura
+select * from Empleado
+select * from Cliente
+select * from Modo_Pago
+
+exec SP_Insertar_Factura01 '001-010596-0001Q','445-080991-0002R','EFECTIVO',0 --18
+
+
 alter proc SP_Insertar_Factura01
 @Cedula_Cliente char(16),
 @Cedula_Empleado char(16),
-@id_Mpago int
+@Mpago varchar(35),
+@id_factura int out
 as
 begin
+declare @id_Mpago int
+set @id_Mpago = (select ID_MPago from Modo_Pago where Descripcion = @Mpago)
+
 set nocount on
 	insert into Factura_Venta(Fecha,ID_Cliente,ID_Empleado,ID_MPago)
 		values (GETDATE(),@Cedula_Cliente,@Cedula_Empleado,@id_Mpago)
-		print 'INSERTADOS DATOS GENERALES DE FACTURA'
+		set @id_factura = @@IDENTITY
+		select @id_factura
 end
 
+select * from Modo_Pago
+
 -----------------------------------------------------------------------------
+select * from Producto
+exec SP_Insertar_Detalle_Factura 18,46,2,0
 
 --segunda parte para insertar factura (detalle factura)
 ALTER proc SP_Insertar_Detalle_Factura
 @id_factura int,
 @id_producto int,
-@cantidad_producto int
+@cantidad_producto int,
+@salida varchar(50) out
 as
 begin
 	set nocount on
@@ -26,20 +43,22 @@ begin
 	begin
 		insert into Detalle_Factura_Venta(ID_Factura,ID_Producto,Cant_Producto)
 		values (@id_factura,@id_producto,@cantidad_producto)
-		print 'DETALLE REGISTRADO CORRECTAMENTE'
+		set @salida = 'DETALLE REGISTRADO CORRECTAMENTE'
 		--Actualizamos el Stock de la tabla producto, restando la cantidad ingresada en detalle_factura
 		update Producto set Stock = Stock - @cantidad_producto where ID_Producto = @id_producto
 	end
 	else
 	begin
-		print 'LA CANTIDAD SOLICITADA DE PRODUCTO ES MAYOR QUE EL STOCK DISPONIBLE'
+		set @salida = 'LA CANTIDAD SOLICITADA DE PRODUCTO ES MAYOR QUE EL STOCK DISPONIBLE'
 	end
 end
 
 ---------------------------------------------------------------------------------------
+SP_Insertar_Factura02 18,0
 --Tercera parte para insertar Factura
 alter proc SP_Insertar_Factura02
-@id_factura int
+@id_factura int,
+@salida varchar(50) out
 as
 	begin
 		--declaracion de variables locales
@@ -61,12 +80,17 @@ as
 			
 		update Factura_Venta set SubTotal = @subtotal, IVA = @iva , Total = @total 
 			where ID_Factura  = @id_factura
-		print 'FACTURA REGISTRADA CORRECTAMENTE'
+		set @salida = 'FACTURA REGISTRADA CORRECTAMENTE'
+		select @salida 
 	end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 select * from Registo_Asistencia
 
+
+select * from Factura_Venta
+select * from Detalle_Factura_Venta where ID_Factura = 18
+select * from Producto
 
 
 

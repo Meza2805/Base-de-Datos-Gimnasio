@@ -1,24 +1,27 @@
-create proc SP_Actualizar_Empleado
-@Cedula char(16),
-@Primer_Nombre varchar(50) out,
-@Segundo_Nombre varchar(50) out,
-@Primer_Apellido varchar(50) out,
-@Segundo_Apellido varchar(50) out,
-@Telefono char(8) out,
-@direccion nvarchar(200) out,
-@fecha_Contratacion date out 
-as
-begin
-	if not exists (select top 1 Cedula from Empleado with (nolock) where Cedula = @Cedula)
+ALTER proc SP_Actualizar_Empleado
+	@Cedula char(16),
+	@Pnombre nvarchar(50),
+	@Snombre nvarchar(50),
+	@Papellido nvarchar(50),
+	@Sapellido nvarchar(50),
+	@telefono varchar(8),
+	@direccion nvarchar(200),
+	@estado varchar (35),
+	@salida varchar(50) out
+	as
 	begin
-		print 'EL EMPELADO NO SE ENCUENTRA EN LA BASE DE DATOS'
-	end
+	set nocount on
+	if exists (select top 1 Cedula from Empleado with (nolock) where Cedula =  @Cedula)
+		begin
+				update Empleado set [Primer Nombre] = @Pnombre, [Segundo Nombre] = @Snombre, [Primer Apellido] = @Papellido, [Segundo Apellido]= @Sapellido,
+				Telefono = @telefono, Direccion = @direccion, Estado = @estado where Cedula = @Cedula
+				set @salida='EL EMPLEADO HA SIDO ACTUALIZADO'
+		end
 	else
-	begin
-		update Empleado set [Primer Nombre] = @Primer_Nombre, [Segundo Nombre] = [Segundo Nombre],
-		[Primer Apellido] =  [Primer Apellido], [Segundo Apellido] = @Segundo_Apellido, Telefono = @Telefono,
-		Direccion= @direccion, [Fecha Contratacion] = @fecha_Contratacion where Cedula = @Cedula
+		begin
+			set @salida='EL EMPLEADO NO SE ENCUENTRA EN LA BASE DE DATOS'
+		end
+		
 	end
-end
- 
 
+	select * from Empleado

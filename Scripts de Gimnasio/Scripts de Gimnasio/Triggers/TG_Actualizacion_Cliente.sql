@@ -1,6 +1,6 @@
 ALTER TRIGGER TG_Actualizacion_Cliente 
    ON  Cliente
-   AFTER INSERT
+   AFTER update
 AS 
 BEGIN
 	SET NOCOUNT ON;

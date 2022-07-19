@@ -1,6 +1,9 @@
-
 alter proc SP_Insertar_Registro_Asistencia
-@Cedula_Cliente char(16)
+@Cedula_Cliente varchar(16),
+@salida varchar(40) out
+---0 simboliza asistencia registrada
+--- 1
+---
 as
 	begin
 	declare @Fecha_Actual date
@@ -8,7 +11,8 @@ as
 						'-' +cast (datepart(month,getdate())as varchar(2)) +
 						'-' +cast (datepart(day,getdate())as varchar(2))
 	set nocount on
-	if not exists (select top 1 ID_Cliente from Registo_Asistencia where ID_Cliente =  @Cedula_Cliente and Fecha = @Fecha_Actual)
+	if not exists (select top 1 ID_Cliente from Registo_Asistencia where ID_Cliente =  @Cedula_Cliente and   
+	(select CONVERT(varchar,Fecha,23))     = @Fecha_Actual)
 		begin --la subconsulta para el siguiente if utiliza el top1 para encontrar la fecha de vencimiento de membresia mas reciente
 		      --Ordenandolo desde la fecha mayor hasta la fecha menor, pues un cliente puede tener una o varias fechas de vencimiento de membresia
 			  --Debido a que puede renovar membresia, lo que a su vez generara siempre una nueva fecha de vencimiento
@@ -16,21 +20,22 @@ as
 			begin
 				update Cliente set ID_Estado ='I' where Cedula =  @Cedula_Cliente  
 				update suscripcion set Finalizada = 1 where ID_Cliente =  @Cedula_Cliente  
-				print 'MEMBRESIA EXPIRADA'
-				print 'EL CLIENTE HA PASADO A ESTADO INACTIVO'
-				print 'HASTA QUE CONTRATE UNA NUEVA MEMBRESIA'
+				set @salida =  'MEMBRESIA EXPIRADA'
+				--print 'EL CLIENTE HA PASADO A ESTADO INACTIVO'
+				--print 'HASTA QUE CONTRATE UNA NUEVA MEMBRESIA'
 			end
 		else
 		begin
 			insert into Registo_Asistencia (Fecha,Hora,ID_Cliente)
 			values (GETDATE(),(cast(datepart (hour, getdate()) as char(2))+ ' : ' +cast (datepart (mi,getdate()) as char(2))),@Cedula_Cliente)
-			print 'ASISTENCIA REGISTRADA'
+			set @salida= 'ASISTENCIA REGISTRADA'
 		end
 	end
 	else
 		begin
-			print 'CLIENTE YA REGISTRADO EL DIA DE HOY'
+			set @salida =  'CLIENTE YA REGISTRADO EL DIA DE HOY'
 		end
+		select @salida
 	end
 ---Fin de proceso almacenado
 ---------------------------------------------------------------------------
@@ -38,13 +43,14 @@ select * from suscripcion order by ID_Cliente
 
 select * from vista.Categoria
 
-
+select * from Cliente
 
 	--Insertando asistencia de los clientes el dia  07/04/2022
-	exec SP_Insertar_Registro_Asistencia 23
+	exec SP_Insertar_Registro_Asistencia '449-160693-2301N',''
 
 --Buscando la manera de comparar la fecha usando el cast y el datepart
-select * from Registo_Asistencia
+select * from Registo_Asistencia order by Fecha desc
+
 print cast (datepart(year,getdate())as varchar(4))+
 '-' +cast (datepart(month,getdate())as varchar(2)) +
 '-' +cast (datepart(day,getdate())as varchar(2))
@@ -356,7 +362,7 @@ select * from Registo_Asistencia
 	exec SP_Insertar_Registro_Asistencia 33
 
 	select * from Cliente where ID_Estado = 'A'
-	SELECT * FROM Registo_Asistencia
+	SELECT * FROM Registo_Asistencia order by Fecha desc
 
 
 			--Insertando asistencia de los clientes el dia  30/04/2022
